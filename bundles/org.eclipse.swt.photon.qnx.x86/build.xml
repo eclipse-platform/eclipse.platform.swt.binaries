@@ -175,7 +175,7 @@
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
 		<exec dir="${temp.folder}/swtdownload" executable="zip">
-			<arg line="-r -q -y ${destination}/swt-${buildid}-${os}-${ws}.zip ."/>
+			<arg line="-r -q -y ${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip ."/>
 		</exec>
 		<delete dir="${temp.folder}"/>
 	</target>

@@ -190,18 +190,18 @@
 			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
-		<zip zipfile="${destination}/swt-${buildid}-${os}-${arch}-${variant}.zip" basedir="${temp.folder}/swtdownload" filesonly="false"/>
+		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}-${arch}-${variant}.zip" basedir="${temp.folder}/swtdownload" filesonly="false"/>
 		<delete dir="${temp.folder}"/>
 	</target>
 
 	<target name="swtdownload.wince.1" depends="init">
-		<property name="variant" value="ppc"/>
+		<property name="variant" value="j2se"/>
 		<antcall target="swtdownload.wince"/>
 	</target>
 
 	<target name="swtdownload.wince.2" depends="init">
 		<property name="JAVA PROFILE" value="j2me"/>
-		<property name="variant" value="ppc-j2me"/>
+		<property name="variant" value="j2me"/>
 		<antcall target="swtdownload.wince"/>
 	</target>
 			

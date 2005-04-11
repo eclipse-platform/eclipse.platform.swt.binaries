@@ -166,7 +166,7 @@
 			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
-		<zip zipfile="${destination}/swt-${buildid}-${os}.zip" basedir="${temp.folder}/swtdownload" filesonly="false"/>
+		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip" basedir="${temp.folder}/swtdownload" filesonly="false"/>
 		<delete dir="${temp.folder}"/>
 	</target>
 
