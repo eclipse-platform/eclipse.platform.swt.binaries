@@ -6,7 +6,7 @@ Bundle-SymbolicName: org.eclipse.swt.motif.hpux.PA_RISC; singleton:=true
 Bundle-Version: 3.1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: fragment
-Export-Package:
+Export-Package: 
  org.eclipse.swt.internal.cairo; x-internal:=true,
  org.eclipse.swt.internal.cde; x-internal:=true,
  org.eclipse.swt.internal.gnome; x-internal:=true,

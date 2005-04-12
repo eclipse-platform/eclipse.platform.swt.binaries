@@ -6,7 +6,7 @@ Bundle-SymbolicName: org.eclipse.swt.win32.wce_ppc.arm; singleton:=true
 Bundle-Version: 3.1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: fragment
-Export-Package:
+Export-Package: 
  org.eclipse.swt.internal.win32; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=win32) (osgi.os=wce_ppc) (osgi.arch=arm))
 

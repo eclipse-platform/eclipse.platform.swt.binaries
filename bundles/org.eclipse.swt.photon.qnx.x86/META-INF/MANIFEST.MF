@@ -6,7 +6,7 @@ Bundle-SymbolicName: org.eclipse.swt.photon.qnx.x86; singleton:=true
 Bundle-Version: 3.1.0
 Bundle-ManifestVersion: 2
 Bundle-Localization: fragment
-Export-Package:
+Export-Package: 
  org.eclipse.swt.internal.photon; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=photon) (osgi.os=qnx) (osgi.arch=x86))
 
