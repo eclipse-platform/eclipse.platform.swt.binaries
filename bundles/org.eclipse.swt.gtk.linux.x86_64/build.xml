@@ -220,7 +220,6 @@
 		<mkdir dir="${lib_destdir}" />
 		<exec dir="${sourcedir}" executable="sh">
 			<arg line="./build.sh"/>
-			<arg line="make_mozilla"/>
 			<arg line="all"/>
 		</exec>
 		<copy todir="${lib_destdir}">
