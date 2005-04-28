@@ -121,19 +121,21 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/cde/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/cde/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="**/*.java,library/**,about.html,mpl-v11.txt" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java,library/**,about.html,mpl-v11.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="**/*.java,about.html,mpl-v11.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/library"/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java,about.html,mpl-v11.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/library"/>
 			<fileset dir="${plugindir}/Eclipse SWT/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/cairo/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/gtk/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/gtk/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
@@ -144,7 +146,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/mozilla/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/gtk/" includes="**/*.java,library/**" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/gtk/" includes="**/*.java**" excludes=""/>
 		</zip>
 	</target>
 
