@@ -36,70 +36,70 @@
 		<delete dir="${temp.folder}/@dot.bin"/>
 		<mkdir dir="${temp.folder}/@dot.bin"/>
 		<javac destdir="${temp.folder}/@dot.bin" verbose="true" debug="on" failonerror="no" bootclasspath="${bootclasspath}" source="1.3" target="1.2">
-			<src path="${plugindir}/Eclipse SWT PI/motif/"/>
-			<src path="${plugindir}/Eclipse SWT PI/common/"/>
-			<src path="${plugindir}/Eclipse SWT PI/common_j2se/"/>
-			<src path="${plugindir}/Eclipse SWT Program/gnome/"/>
-			<src path="${plugindir}/Eclipse SWT Program/cde/"/>
-			<src path="${plugindir}/Eclipse SWT PI/cairo/"/>
-			<src path="${plugindir}/Eclipse SWT PI/motif_gtk/"/>
-			<src path="${plugindir}/Eclipse SWT Mozilla/common/"/>
-			<src path="${plugindir}/Eclipse SWT/motif/"/>
 			<src path="${plugindir}/Eclipse SWT/cairo/"/>
+			<src path="${plugindir}/Eclipse SWT/common/"/>
+			<src path="${plugindir}/Eclipse SWT/common_j2se/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/bidi"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/coolbar"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/tabfolder"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/tray"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/treetable"/>
-			<src path="${plugindir}/Eclipse SWT/common/"/>
-			<src path="${plugindir}/Eclipse SWT/common_j2se/"/>
-			<src path="${plugindir}/Eclipse SWT Accessibility/emulated/"/>
+			<src path="${plugindir}/Eclipse SWT/motif/"/>
 			<src path="${plugindir}/Eclipse SWT Accessibility/common/"/>
-			<src path="${plugindir}/Eclipse SWT AWT/motif/"/>
+			<src path="${plugindir}/Eclipse SWT Accessibility/emulated/"/>
 			<src path="${plugindir}/Eclipse SWT AWT/common/"/>
-			<src path="${plugindir}/Eclipse SWT Drag and Drop/motif/"/>
-			<src path="${plugindir}/Eclipse SWT Drag and Drop/common/"/>
-			<src path="${plugindir}/Eclipse SWT Printing/motif/"/>
-			<src path="${plugindir}/Eclipse SWT Printing/common/"/>
-			<src path="${plugindir}/Eclipse SWT Program/motif/"/>
-			<src path="${plugindir}/Eclipse SWT Program/common/"/>
-			<src path="${plugindir}/Eclipse SWT Custom Widgets/common/"/>
+			<src path="${plugindir}/Eclipse SWT AWT/motif/"/>
 			<src path="${plugindir}/Eclipse SWT Browser/common/"/>
 			<src path="${plugindir}/Eclipse SWT Browser/motif/"/>
+			<src path="${plugindir}/Eclipse SWT Custom Widgets/common/"/>
+			<src path="${plugindir}/Eclipse SWT Drag and Drop/common/"/>
+			<src path="${plugindir}/Eclipse SWT Drag and Drop/motif/"/>
+			<src path="${plugindir}/Eclipse SWT Mozilla/common/"/>
+			<src path="${plugindir}/Eclipse SWT PI/cairo/"/>
+			<src path="${plugindir}/Eclipse SWT PI/common/"/>
+			<src path="${plugindir}/Eclipse SWT PI/common_j2se/"/>
+			<src path="${plugindir}/Eclipse SWT PI/motif/"/>
+			<src path="${plugindir}/Eclipse SWT PI/motif_gtk/"/>
+			<src path="${plugindir}/Eclipse SWT Printing/common/"/>
+			<src path="${plugindir}/Eclipse SWT Printing/motif/"/>
+			<src path="${plugindir}/Eclipse SWT Program/cde/"/>
+			<src path="${plugindir}/Eclipse SWT Program/common/"/>
+			<src path="${plugindir}/Eclipse SWT Program/gnome/"/>
+			<src path="${plugindir}/Eclipse SWT Program/motif/"/>
 		</javac>
         <property name="includes" value=""/>
         <property name="excludes" value="**/*.java,**/library/,**/package.htm*"/>
 		<copy todir="${temp.folder}/@dot.bin">
-			<fileset dir="${plugindir}/Eclipse SWT PI/motif/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/cde/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/motif_gtk/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/motif/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/cairo/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tabfolder" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/treetable" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/motif/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/motif/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/motif/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/motif/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/motif/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/motif/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/motif_gtk/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Printing/motif/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/cde/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
 
 		<mkdir dir="${build.result.folder}/@dot"/>
@@ -119,51 +119,44 @@
 	<target name="src.zip" depends="init" unless="src.zip">
 		<mkdir dir="${build.result.folder}/"/>
 		<zip zipfile="${build.result.folder}/src.zip">
-			<fileset dir="${plugindir}/Eclipse SWT PI/motif/" includes="**/*.java,about.html,lglp-v21.txt" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/motif/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/cde/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/cde/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="**/*.java,about.html,mpl-v11.txt" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/motif_gtk/" includes="**/*.java,about.html,lglp-v21.txt" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/motif_gtk/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java,library/**,about.html,mpl-v11.txt" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/motif/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/cairo/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tabfolder" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/treetable" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/motif/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/motif/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/motif/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/motif/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/motif/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/cde/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/cde/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/motif/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java,about.html,mpl-v11.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="**/*.java,about.html,mpl-v11.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/motif/" includes="**/*.java,about.html,lglp-v21.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/motif/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/motif_gtk/" includes="**/*.java,about.html,lglp-v21.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/motif_gtk/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Printing/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/cde/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/cde/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="**/*.java" excludes=""/>
 		</zip>
 	</target>
 
