@@ -15,7 +15,8 @@
 		<property name="plugindir" value="../org.eclipse.swt"/>
 		<property name="bootclasspath" value=""/>
 		<property name="temp.folder.64" value="${basedir}/temp.folder/64"/>
-		<property name="toolsplugindir" value="../org.eclipse.swt.tools"/>		
+		<property name="toolsplugindir" value="../org.eclipse.swt.tools"/>
+		<property name="javacVerbose" value="true"/>
 	</target>
 
 	<target name="properties" if="eclipse.running">
@@ -38,7 +39,7 @@
 		<property name="destdir" value="${temp.folder}/@dot.bin"/>
 		<delete dir="${temp.folder}/@dot.bin"/>
 		<mkdir dir="${temp.folder}/@dot.bin"/>
-		<javac destdir="${temp.folder}/@dot.bin" verbose="true" debug="on" failonerror="no" bootclasspath="${bootclasspath}" source="1.3" target="1.2">
+		<javac destdir="${temp.folder}/@dot.bin" verbose="${javacVerbose}" debug="on" failonerror="no" bootclasspath="${bootclasspath}" source="1.3" target="1.2">
 			<src path="${basedir}/src/Eclipse SWT/cairo/"/>
 			<src path="${basedir}/src/Eclipse SWT/common/"/>
 			<src path="${basedir}/src/Eclipse SWT/common_j2se/"/>

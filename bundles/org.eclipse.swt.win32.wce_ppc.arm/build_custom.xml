@@ -30,6 +30,7 @@
 		<property name="destination" value="${basedir}"/>
 		<property name="plugindir" value="../org.eclipse.swt"/>
 		<property name="bootclasspath" value=""/>
+		<property name="javacVerbose" value="true"/>
 	</target>
 
 	<target name="properties" if="eclipse.running">
@@ -69,7 +70,7 @@
 		<property name="DEBUG" value="on"/>
 
 		<!-- Build class files -->
-		<javac srcdir="${temp.folder}/ws/win32/swt.jar.bin" verbose="false" debug="${DEBUG}" failonerror="yes" bootclasspath="${bootclasspath}"/>
+		<javac srcdir="${temp.folder}/ws/win32/swt.jar.bin" verbose="${javacVerbose}" debug="${DEBUG}" failonerror="yes" bootclasspath="${bootclasspath}"/>
 		
 		<!-- Create resulting jar file into result folder -->
 		<mkdir dir="${build.result.folder}/ws/win32/"/>

@@ -14,6 +14,7 @@
 		<property name="destination" value="${basedir}"/>
 		<property name="plugindir" value="../org.eclipse.swt"/>
 		<property name="bootclasspath" value=""/>
+		<property name="javacVerbose" value="true"/>
 	</target>
 
 	<target name="properties" if="eclipse.running">
@@ -35,7 +36,7 @@
 		<property name="destdir" value="${temp.folder}/@dot.bin"/>
 		<delete dir="${temp.folder}/@dot.bin"/>
 		<mkdir dir="${temp.folder}/@dot.bin"/>
-		<javac destdir="${temp.folder}/@dot.bin" verbose="true" debug="on" failonerror="no" bootclasspath="${bootclasspath}" source="1.3" target="1.2">
+		<javac destdir="${temp.folder}/@dot.bin" verbose="${javacVerbose}" debug="on" failonerror="no" bootclasspath="${bootclasspath}" source="1.3" target="1.2">
 			<src path="${plugindir}/Eclipse SWT/common/"/>
 			<src path="${plugindir}/Eclipse SWT/common_j2se/"/>
 			<src path="${plugindir}/Eclipse SWT/win32/"/>
