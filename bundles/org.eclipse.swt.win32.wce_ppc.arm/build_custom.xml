@@ -70,7 +70,7 @@
 		<property name="DEBUG" value="on"/>
 
 		<!-- Build class files -->
-		<javac srcdir="${temp.folder}/ws/win32/swt.jar.bin" verbose="${javacVerbose}" debug="${DEBUG}" failonerror="yes" bootclasspath="${bootclasspath}"/>
+		<javac destdir="${temp.folder}/ws/win32/swt.jar.bin" srcdir="${temp.folder}/ws/win32/swt.jar.bin" verbose="${javacVerbose}" debug="${DEBUG}" failonerror="yes" bootclasspath="${bootclasspath}"/>
 		
 		<!-- Create resulting jar file into result folder -->
 		<mkdir dir="${build.result.folder}/ws/win32/"/>
