@@ -128,6 +128,9 @@
 			<fileset dir="${plugindir}/Eclipse SWT Printing/photon/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/photon/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}" includes="**/*.properties" excludes=""/>
+			<fileset dir="${plugindir}" includes="**/version.txt" excludes=""/>
+			<fileset dir="${plugindir}" includes="about.html,about_files/" excludes=""/>
 		</zip>
 	</target>
 
