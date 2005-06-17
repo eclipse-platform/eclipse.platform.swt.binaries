@@ -160,7 +160,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
-			<fileset dir="${plugindir}" includes="about.html,about_files/" excludes=""/>
+			<fileset dir="${plugindir}" includes="about.html,about_open_motif.html,about_cairo.html,about_files/" excludes=""/>
 		</zip>
 	</target>
 
@@ -206,8 +206,8 @@
 		<copy file="${plugindir}/build/.project" todir="${temp.folder}/swtdownload"/>
 		<copy file="${plugindir}/build/.classpath" todir="${temp.folder}/swtdownload"/>
 		<copy todir="${temp.folder}/swtdownload">
-			<fileset dir="${basedir}" includes="about.html,about_open_motif.html,about_files/"/>
-			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
+			<fileset dir="${basedir}" includes="about.html,about_open_motif.html,about_cairo.html,about_files/"/>
+			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2,libcairo.so.1"/>
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
 		<exec dir="${temp.folder}/swtdownload" executable="zip">
