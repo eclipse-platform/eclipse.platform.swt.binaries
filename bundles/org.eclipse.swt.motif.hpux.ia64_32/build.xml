@@ -158,8 +158,8 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}" includes="**/*.properties" excludes=""/>
-			<fileset dir="${plugindir}" includes="**/version.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
 			<fileset dir="${plugindir}" includes="about.html,about_files/" excludes=""/>
 		</zip>
 	</target>

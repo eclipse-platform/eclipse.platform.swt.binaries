@@ -120,8 +120,8 @@
 			<fileset dir="${plugindir}/Eclipse SWT Printing/win32/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/win32/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}" includes="**/*.properties" excludes=""/>
-			<fileset dir="${plugindir}" includes="**/version.txt" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
 			<fileset dir="${plugindir}" includes="about.html,about_files/" excludes=""/>
 		</zip>
 	</target>
