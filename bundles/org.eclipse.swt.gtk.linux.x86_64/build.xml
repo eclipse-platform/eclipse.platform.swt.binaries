@@ -161,14 +161,14 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/gtk/" includes="**/*.java" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java,about.html,mpl-v11.txt" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="**/*.java" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/" includes="**/*.java,about.html,mpl-v11.txt" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT PI/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/gtk/" includes="**/*.java,about.html,lglp-v21.txt" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/gtk/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Printing/gtk/" includes="**/*.java" excludes=""/>
@@ -180,7 +180,7 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gnome/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
-			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>
+			<fileset dir="${basedir}" includes="about.html,about_cairo.html,about_files/" excludes=""/>
 		</zip>
 	</target>
 
@@ -240,9 +240,7 @@
 		<mkdir dir="${destination.temp.folder}/${full.name}"/>
 		<copy file="${build.result.folder}/src.zip" todir="${destination.temp.folder}/${full.name}/"/>
 		<copy todir="${destination.temp.folder}/${full.name}">
-			<fileset dir="${basedir}" includes="about.html"/>
-			<fileset dir="${basedir}" includes="about_files/lgpl-v21.txt"/>
-			<fileset dir="${basedir}" includes="about_files/mpl-v11.txt"/>
+			<fileset dir="${basedir}" includes="about.html,about_files/"/>
 		</copy>
 	</target>
 
@@ -257,10 +255,7 @@
 			<fileset dir="${build.result.folder}/@dot" includes="**"/>
 		</copy>
 		<copy todir="${destination.temp.folder}/${full.name}">
-			<fileset dir="${basedir}" includes="fragment.properties,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,META-INF/"/> 
-			<fileset dir="${basedir}" includes="about.html"/>
-			<fileset dir="${basedir}" includes="about_files/lgpl-v21.txt"/>
-			<fileset dir="${basedir}" includes="about_files/mpl-v11.txt"/>
+			<fileset dir="${basedir}" includes="fragment.properties,about.html,about_files/,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,META-INF/"/> 
 		</copy>
 	  	<chmod perm="755" dir="${destination.temp.folder}/${full.name}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib" />
 	</target>
@@ -275,8 +270,8 @@
 		<copy file="${plugindir}/build/.project" todir="${temp.folder}/swtdownload"/>
 		<copy file="${plugindir}/build/.classpath" todir="${temp.folder}/swtdownload"/>
 		<copy todir="${temp.folder}/swtdownload">
+			<fileset dir="${basedir}" includes="about.html,about_cairo.html,about_files/"/>
 			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2,libcairo.so.1"/>
-			<fileset dir="${basedir}" includes="about.html,about_files/"/>
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
 		<exec dir="${temp.folder}/swtdownload" executable="zip">
