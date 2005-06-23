@@ -178,9 +178,9 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gnome/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gnome/library/"/>
-			<fileset dir="${basedir}/src/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
-			<fileset dir="${basedir}" includes="about.html,about_cairo.html,about_files/" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
+			<fileset dir="${plugindir}" includes="about.html,about_cairo.html,about_files/" excludes=""/>
 		</zip>
 	</target>
 
