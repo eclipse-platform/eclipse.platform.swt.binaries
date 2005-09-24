@@ -56,6 +56,9 @@
 			<src path="${plugindir}/Eclipse SWT Drag and Drop/common/"/>
 			<src path="${plugindir}/Eclipse SWT Drag and Drop/motif/"/>
 			<src path="${plugindir}/Eclipse SWT Mozilla/common/"/>
+			<src path="${plugindir}/Eclipse SWT OpenGL/motif/"/>
+			<src path="${plugindir}/Eclipse SWT OpenGL/glx/"/>
+			<src path="${plugindir}/Eclipse SWT OpenGL/common/"/>
 			<src path="${plugindir}/Eclipse SWT PI/cairo/"/>
 			<src path="${plugindir}/Eclipse SWT PI/common/"/>
 			<src path="${plugindir}/Eclipse SWT PI/common_j2se/"/>
@@ -90,6 +93,9 @@
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/motif/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>
@@ -142,6 +148,10 @@
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>

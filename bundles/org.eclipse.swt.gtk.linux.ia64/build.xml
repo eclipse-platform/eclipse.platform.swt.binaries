@@ -57,6 +57,9 @@
 			<src path="${basedir}/src/Eclipse SWT Drag and Drop/gtk/"/>
 			<src path="${basedir}/src/Eclipse SWT Mozilla/gtk/"/>
 			<src path="${basedir}/src/Eclipse SWT Mozilla/common/"/>
+			<src path="${basedir}/src/Eclipse SWT OpenGL/gtk/"/>
+			<src path="${basedir}/src/Eclipse SWT OpenGL/glx/"/>
+			<src path="${basedir}/src/Eclipse SWT OpenGL/common/"/>
 			<src path="${basedir}/src/Eclipse SWT PI/cairo/"/>
 			<src path="${basedir}/src/Eclipse SWT PI/common/"/>
 			<src path="${basedir}/src/Eclipse SWT PI/common_j2se/"/>
@@ -88,6 +91,9 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/gtk/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/gtk/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>
@@ -164,6 +170,10 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/library/"/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
@@ -198,6 +208,7 @@
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"><arg value="org.eclipse.swt.internal.gnome.GNOME"/><arg value="${basedir}/src/Eclipse SWT Program/gnome/library/"/><arg value="${build.result.folder}/swt.jar"/></java>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"><arg value="org.eclipse.swt.internal.cde.CDE"/><arg value="${basedir}/src/Eclipse SWT Program/cde/library/"/><arg value="${build.result.folder}/swt.jar"/></java>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"><arg value="org.eclipse.swt.internal.mozilla.XPCOM"/><arg value="${basedir}/src/Eclipse SWT Mozilla/common/library/"/><arg value="${build.result.folder}/swt.jar"/></java>
+		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"><arg value="org.eclipse.swt.internal.opengl.glx.GLX"/><arg value="${basedir}/src/Eclipse SWT OpenGL/glx/library/"/><arg value="${build.result.folder}/swt.jar"/></java>
 
 		<!-- copy all the files into /library folders into a temporary bin/library folder  -->
 		<!-- since this is the structure assumed by the native makefile and given that     -->
@@ -208,6 +219,7 @@
 			<fileset dir="${basedir}/src/Eclipse SWT/common/library"/>
 			<fileset dir="${basedir}/src/Eclipse SWT AWT/gtk/library"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library"/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/library"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/gtk/library"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/cde/library"/>
