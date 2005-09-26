@@ -13,4 +13,3 @@ Export-Package:
  org.eclipse.swt.internal.win32; x-internal:=true,
  org.eclipse.swt.internal.opengl.win32; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=win32) (osgi.os=win32) (osgi.arch=x86))
-

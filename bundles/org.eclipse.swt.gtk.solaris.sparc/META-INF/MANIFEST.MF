@@ -15,4 +15,3 @@ Export-Package:
  org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=solaris) (osgi.arch=sparc))
-

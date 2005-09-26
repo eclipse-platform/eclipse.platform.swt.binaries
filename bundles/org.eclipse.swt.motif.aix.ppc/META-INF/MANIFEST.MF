@@ -14,4 +14,3 @@ Export-Package:
  org.eclipse.swt.internal.motif; x-internal:=true,
  org.eclipse.swt.internal.mozilla; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=motif) (osgi.os=aix) (osgi.arch=ppc))
-
