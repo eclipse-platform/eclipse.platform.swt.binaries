@@ -6,8 +6,8 @@
 		<property name="os" value="hpux"/>
 		<property name="arch" value="ia64_32"/>
 		<property name="fragment" value="org.eclipse.swt.${ws}.${os}.${arch}"/>
-		<property name="version.suffix" value="_3.1.0"/>
-		<property name="full.name" value="${fragment}${version.suffix}"/>
+		<property name="version.suffix" value="3.1.0"/>
+		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
 		<property name="plugin.destination" value="${basedir}"/>
 		<property name="build.result.folder" value="${basedir}"/>
@@ -204,6 +204,7 @@
 			<fileset dir="${basedir}" includes="fragment.properties,about.html,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,META-INF/"/> 
 		</copy>
 	  	<chmod perm="755" dir="${destination.temp.folder}/${full.name}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib" />
+		<eclipse.versionReplacer path="${destination.temp.folder}/${full.name}" version="${version.suffix}"/>
 	</target>
 	
 	<target name="swtdownload" depends="init">	
