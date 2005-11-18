@@ -5,7 +5,7 @@
 		<property name="ws" value="gtk"/>
 		<property name="os" value="solaris"/>
 		<property name="arch" value="sparc"/>
-		<property name="fragment" value="org.eclipse.swt.${ws}.${os}.${arch}"/>
+		<property name="fragment" value="org.eclipse.swt.gtk.solaris.sparc"/>
 		<property name="version.suffix" value="3.2.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>

@@ -5,7 +5,7 @@
 		<property name="ws" value="gtk"/>
 		<property name="os" value="linux"/>
 		<property name="arch" value="x86_64"/>
-		<property name="fragment" value="org.eclipse.swt.${ws}.${os}.${arch}"/>
+		<property name="fragment" value="org.eclipse.swt.gtk.linux.x86_64"/>
 		<property name="version.suffix" value="3.2.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
