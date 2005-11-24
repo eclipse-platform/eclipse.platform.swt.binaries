@@ -201,9 +201,9 @@
 			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
-		<exec dir="${temp.folder}/swtdownload" executable="zip">
-			<arg line="-r -q -y ${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip ."/>
-		</exec>
+		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip">
+			<zipfileset dir="${temp.folder}/swtdownload/" prefix="swt-${buildid}-${ws}-${os}-${arch}"/>
+		</zip>
 		<delete dir="${temp.folder}"/>
 	</target>
 

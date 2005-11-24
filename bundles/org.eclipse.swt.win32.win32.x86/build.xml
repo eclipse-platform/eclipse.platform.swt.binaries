@@ -180,7 +180,9 @@
 			<fileset dir="${basedir}" includes="javaw.exe.manifest,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
-		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip" basedir="${temp.folder}/swtdownload" filesonly="false"/>
+		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip">
+			<zipfileset dir="${temp.folder}/swtdownload/" prefix="swt-${buildid}-${ws}-${os}-${arch}"/>
+		</zip>
 		<delete dir="${temp.folder}"/>
 	</target>
 
