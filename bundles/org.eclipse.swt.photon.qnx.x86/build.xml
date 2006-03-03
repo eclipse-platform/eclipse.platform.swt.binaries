@@ -46,6 +46,7 @@
 			<src path="${plugindir}/Eclipse SWT/emulated/tray/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/treetable/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/expand/"/>
+			<src path="${plugindir}/Eclipse SWT/emulated/tooltip/"/>
 			<src path="${plugindir}/Eclipse SWT/photon/"/>
 			<src path="${plugindir}/Eclipse SWT Accessibility/common/"/>
 			<src path="${plugindir}/Eclipse SWT Accessibility/emulated/"/>
@@ -75,6 +76,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/treetable/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/expand/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/photon/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="${includes}" excludes="${excludes}"/>
@@ -120,6 +122,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/treetable/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/expand/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/photon/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="**/*.java" excludes=""/>
