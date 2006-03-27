@@ -17,7 +17,7 @@
 		<property name="temp.folder.64" value="${basedir}/temp.folder/64"/>
 		<property name="toolsplugindir" value="../org.eclipse.swt.tools"/>
 		<property name="javacVerbose" value="false"/>
-		<property name="logExtension" value=".log"/> 
+		<property name="logExtension" value=".xml"/> 
 	</target>
 
 	<target name="properties" if="eclipse.running">
@@ -71,7 +71,7 @@
 			<src path="${basedir}/src/Eclipse SWT Program/common/"/>
 			<src path="${basedir}/src/Eclipse SWT Program/gnome/"/>
 			<src path="${basedir}/src/Eclipse SWT Program/gtk/"/>
-			<compilerarg line="-log ${temp.folder}/@dot.bin${logExtension}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
+			<compilerarg line="-log '${temp.folder}'/@dot.bin${logExtension}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 		</javac>
         <property name="includes" value=""/>
         <property name="excludes" value="**/*.java,**/library/,**/package.htm*"/>
