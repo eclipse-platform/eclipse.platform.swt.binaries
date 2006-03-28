@@ -201,8 +201,10 @@
 		<copy file="${build.result.folder}/src.zip" todir="${destination.temp.folder}/${full.name}/"/>
 		<copy todir="${destination.temp.folder}/${full.name}">
 			<fileset dir="${basedir}" includes="about.html"/>
+			<fileset dir="${basedir}" includes="about_files/about_cairo.html"/>
 			<fileset dir="${basedir}" includes="about_files/lgpl-v21.txt"/>
 			<fileset dir="${basedir}" includes="about_files/mpl-v11.txt"/>
+			<fileset dir="${basedir}" includes="about_files/pixman-licenses.txt"/>
 		</copy>
 	</target>
 
@@ -217,12 +219,14 @@
 			<fileset dir="${build.result.folder}/@dot" includes="**"/>
 		</copy>
 		<copy todir="${destination.temp.folder}/${full.name}">
-			<fileset dir="${basedir}" includes="fragment.properties,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,META-INF/"/> 
+			<fileset dir="${basedir}" includes="fragment.properties,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libcairo-swt.so,META-INF/"/> 
 			<fileset dir="${basedir}" includes="about.html"/>
+			<fileset dir="${basedir}" includes="about_files/about_cairo.html"/>
 			<fileset dir="${basedir}" includes="about_files/lgpl-v21.txt"/>
 			<fileset dir="${basedir}" includes="about_files/mpl-v11.txt"/>
+			<fileset dir="${basedir}" includes="about_files/pixman-licenses.txt"/>
 		</copy>
-	  	<chmod perm="755" dir="${destination.temp.folder}/${full.name}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib" />
+	  	<chmod perm="755" dir="${destination.temp.folder}/${full.name}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libcairo-swt.so" />
 		<eclipse.versionReplacer path="${destination.temp.folder}/${full.name}" version="${version.suffix}"/>
 	</target>
 	
@@ -236,7 +240,7 @@
 		<copy file="${plugindir}/build/.project" todir="${temp.folder}/swtdownload"/>
 		<copy file="${plugindir}/build/.classpath" todir="${temp.folder}/swtdownload"/>
 		<copy todir="${temp.folder}/swtdownload">
-			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2,libcairo.so.1"/>
+			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libcairo-swt.so"/>
 			<fileset dir="${basedir}" includes="about.html,about_files/"/>
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
