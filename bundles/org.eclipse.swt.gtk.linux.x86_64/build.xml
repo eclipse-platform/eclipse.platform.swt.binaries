@@ -255,10 +255,7 @@
 		<copy file="${build.result.folder}/src.zip" todir="${destination.temp.folder}/${full.name}/"/>
 		<copy todir="${destination.temp.folder}/${full.name}">
 			<fileset dir="${basedir}" includes="about.html"/>
-			<fileset dir="${basedir}" includes="about_files/about_cairo.html"/>
-			<fileset dir="${basedir}" includes="about_files/lgpl-v21.txt"/>
-			<fileset dir="${basedir}" includes="about_files/mpl-v11.txt"/>
-			<fileset dir="${basedir}" includes="about_files/pixman-licenses.txt"/>
+			<fileset dir="${basedir}" includes="about_files/"/>
 		</copy>
 	</target>
 
@@ -275,10 +272,7 @@
 		<copy todir="${destination.temp.folder}/${full.name}">
 			<fileset dir="${basedir}" includes="fragment.properties,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libcairo-swt.so,META-INF/"/> 
 			<fileset dir="${basedir}" includes="about.html"/>
-			<fileset dir="${basedir}" includes="about_files/about_cairo.html"/>
-			<fileset dir="${basedir}" includes="about_files/lgpl-v21.txt"/>
-			<fileset dir="${basedir}" includes="about_files/mpl-v11.txt"/>
-			<fileset dir="${basedir}" includes="about_files/pixman-licenses.txt"/>
+			<fileset dir="${basedir}" includes="about_files/"/>
 		</copy>
 	  	<chmod perm="755" dir="${destination.temp.folder}/${full.name}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libcairo-swt.so" />
 		<eclipse.versionReplacer path="${destination.temp.folder}/${full.name}" version="${version.suffix}"/>
