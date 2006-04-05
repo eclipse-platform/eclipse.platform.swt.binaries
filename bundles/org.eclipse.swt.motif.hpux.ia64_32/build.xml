@@ -178,7 +178,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
-			<fileset dir="${basedir}" includes="about.html" excludes=""/>
+			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>
 		</zip>
 	</target>
 
@@ -194,7 +194,7 @@
 		<mkdir dir="${destination.temp.folder}/${full.name}"/>
 		<copy file="${build.result.folder}/src.zip" todir="${destination.temp.folder}/${full.name}/"/>
 		<copy todir="${destination.temp.folder}/${full.name}">
-			<fileset dir="${basedir}" includes="about.html"/>
+			<fileset dir="${basedir}" includes="about.html,about_files/"/>
 		</copy>
 	</target>
 
@@ -209,7 +209,7 @@
 			<fileset dir="${build.result.folder}/@dot" includes="**"/>
 		</copy>
 		<copy todir="${destination.temp.folder}/${full.name}">
-			<fileset dir="${basedir}" includes="fragment.properties,about.html,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,META-INF/"/> 
+			<fileset dir="${basedir}" includes="fragment.properties,about.html,about_files/,swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,META-INF/"/> 
 		</copy>
 	  	<chmod perm="755" dir="${destination.temp.folder}/${full.name}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib" />
 		<eclipse.versionReplacer path="${destination.temp.folder}/${full.name}" version="${version.suffix}"/>
@@ -225,7 +225,7 @@
 		<copy file="${plugindir}/build/.project" todir="${temp.folder}/swtdownload"/>
 		<copy file="${plugindir}/build/.classpath" todir="${temp.folder}/swtdownload"/>
 		<copy todir="${temp.folder}/swtdownload">
-			<fileset dir="${basedir}" includes="about.html"/>
+			<fileset dir="${basedir}" includes="about.html,about_files/"/>
 			<fileset dir="${basedir}" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
