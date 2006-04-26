@@ -71,6 +71,7 @@
 			<src path="${basedir}/src/Eclipse SWT Program/common/"/>
 			<src path="${basedir}/src/Eclipse SWT Program/gnome/"/>
 			<src path="${basedir}/src/Eclipse SWT Program/gtk/"/>
+			<src path="${basedir}/src/Eclipse SWT Theme/gtk/"/>
 			<compilerarg line="-log '${temp.folder}'/@dot.bin${logExtension}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 		</javac>
         <property name="includes" value=""/>
@@ -106,6 +107,7 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gnome/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gtk/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Theme/gtk/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
 
 		<mkdir dir="${build.result.folder}/@dot"/>
@@ -190,6 +192,7 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gnome/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gnome/library/"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Theme/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
 			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>

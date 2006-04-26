@@ -59,6 +59,7 @@
 			<src path="${plugindir}/Eclipse SWT Printing/win32/"/>
 			<src path="${plugindir}/Eclipse SWT Program/common/"/>
 			<src path="${plugindir}/Eclipse SWT Program/win32/"/>
+			<src path="${plugindir}/Eclipse SWT Theme/win32/"/>
 			<compilerarg line="-log '${temp.folder}'/@dot.bin${logExtension}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
 		</javac>
         <property name="includes" value=""/>
@@ -85,6 +86,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Printing/win32/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Theme/win32/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
 
 		<mkdir dir="${build.result.folder}/@dot"/>
@@ -129,6 +131,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Printing/win32/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Theme/win32/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
 			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>
