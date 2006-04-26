@@ -73,6 +73,7 @@
 			<src path="${plugindir}/Eclipse SWT Program/common/"/>
 			<src path="${plugindir}/Eclipse SWT Program/gnome/"/>
 			<src path="${plugindir}/Eclipse SWT Program/motif/"/>
+			<src path="${plugindir}/Eclipse SWT Theme/emulated/"/>
 			<compilerarg line="-log '${temp.folder}'/@dot.bin${logExtension}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 		</javac>
         <property name="includes" value=""/>
@@ -113,6 +114,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
 
 		<mkdir dir="${build.result.folder}/@dot"/>
@@ -176,6 +178,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
 			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>
