@@ -14,6 +14,4 @@ Export-Package:
  org.eclipse.swt.internal.motif; x-internal:=true,
  org.eclipse.swt.internal.mozilla; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=motif) (osgi.os=hpux) (osgi.arch=PA_RISC))
-Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
- J2SE-1.3
 
