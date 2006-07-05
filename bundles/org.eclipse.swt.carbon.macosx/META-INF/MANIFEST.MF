@@ -8,6 +8,7 @@ Bundle-ManifestVersion: 2
 Bundle-Localization: fragment
 Export-Package: 
  org.eclipse.swt.internal.carbon; x-internal:=true,
+ org.eclipse.swt.internal.cocoa; x-internal:=true,
  org.eclipse.swt.internal.opengl.carbon; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=carbon) (osgi.os=macosx) (|(osgi.arch=x86)(osgi.arch=ppc)) )
 Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
