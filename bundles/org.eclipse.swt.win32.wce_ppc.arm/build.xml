@@ -6,7 +6,7 @@
 		<property name="os" value="wce_ppc"/>
 		<property name="arch" value="arm"/>
 		<property name="fragment" value="org.eclipse.swt.win32.wce_ppc.arm"/>
-		<property name="version.suffix" value="3.2.0"/>
+		<property name="version.suffix" value="3.2.1"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
 		<property name="plugin.destination" value="${basedir}"/>
