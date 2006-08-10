@@ -5,7 +5,7 @@
 		<property name="ws" value="carbon"/>
 		<property name="os" value="macosx"/>
 		<property name="fragment" value="org.eclipse.swt.carbon.macosx"/>
-		<property name="version.suffix" value="3.2.0"/>
+		<property name="version.suffix" value="3.3.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
 		<property name="plugin.destination" value="${basedir}"/>
