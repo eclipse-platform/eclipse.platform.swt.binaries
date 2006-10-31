@@ -60,6 +60,7 @@
 			<src path="${plugindir}/Eclipse SWT/common_j2se/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/bidi"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/coolbar"/>
+			<src path="${plugindir}/Eclipse SWT/emulated/datetime"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/tabfolder"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/tray"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/treetable"/>
@@ -101,6 +102,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/datetime" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tabfolder" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/treetable" includes="${includes}" excludes="${excludes}"/>
@@ -157,6 +159,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/datetime" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tabfolder" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/treetable" includes="**/*.java" excludes=""/>
