@@ -59,6 +59,7 @@
 			<src path="${plugindir}/Eclipse SWT/common_j2se/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/bidi/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/coolbar/"/>
+			<src path="${plugindir}/Eclipse SWT/emulated/datetime"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/graphics/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/textlayout/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/tray/"/>
