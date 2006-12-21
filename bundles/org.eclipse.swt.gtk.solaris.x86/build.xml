@@ -224,7 +224,7 @@
 		</copy>
 		<chmod dir="${temp.folder}/swtdownload" perm="755" includes="**/lib*"/>
 		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip">
-			<zipfileset dir="${temp.folder}/swtdownload/" prefix="swt-${buildid}-${ws}-${os}-${arch}"/>
+			<zipfileset dir="${temp.folder}/swtdownload/"/>
 		</zip>
 		<delete dir="${temp.folder}"/>
 	</target>
