@@ -2,7 +2,7 @@
 <project name="org.eclipse.swt.win32.wce_ppc.arm" default="build.jars" basedir=".">
 
 	<target name="init" depends="properties">
-		<property name="ws" value="win32"/>
+		<property name="compilerArg" value=""/>
 		<property name="os" value="wce_ppc"/>
 		<property name="arch" value="arm"/>
 		<property name="fragment" value="org.eclipse.swt.win32.wce_ppc.arm"/>
@@ -77,6 +77,7 @@
 			<src path="${plugindir}/Eclipse SWT Browser/common/"/>
 			<src path="${plugindir}/Eclipse SWT Browser/win32/"/>
 			<compilerarg line="-log '${temp.folder}'/@dot.bin${logExtension}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
+			<compilerarg line="${compilerArg}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 		</javac>
         <property name="includes" value=""/>
         <property name="excludes" value="**/*.java,**/library/,**/package.htm*"/>
