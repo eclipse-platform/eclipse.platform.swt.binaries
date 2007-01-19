@@ -131,6 +131,7 @@
 													
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_${JAVA PROFILE}/" includes="${includes}" excludes="${excludes}"/>
 
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/win32/" includes="${includes}" excludes="${excludes}">
 				<!-- remove internal ole binding when not using OLE -->
 				<exclude name="org/eclipse/swt/internal/ole/win32/*" if="EXCLUDE OLE"/>
