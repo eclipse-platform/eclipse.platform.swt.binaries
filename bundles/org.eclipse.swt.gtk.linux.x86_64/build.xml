@@ -226,6 +226,7 @@
 	<target name="build.cfiles" depends="build.jars">
 		<!-- generate the C code from the (64 bit) SWT PI java classes -->
 		<!-- assumes the swt.jar has already been built  -->
+		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"><arg value="org.eclipse.swt.internal.C"/><arg value="${basedir}/src/Eclipse SWT PI/common/library/"/><arg value="${build.result.folder}/swt.jar"/></java>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"><arg value="org.eclipse.swt.internal.gtk.OS"/><arg value="${basedir}/src/Eclipse SWT PI/gtk/library/"/><arg value="${build.result.folder}/swt.jar"/></java>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"><arg value="org.eclipse.swt.internal.accessibility.gtk.ATK"/><arg value="${basedir}/src/Eclipse SWT PI/gtk/library/"/><arg value="${build.result.folder}/swt.jar"/></java>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"><arg value="org.eclipse.swt.internal.cairo.Cairo"/><arg value="${basedir}/src/Eclipse SWT PI/cairo/library/"/><arg value="${build.result.folder}/swt.jar"/></java>
