@@ -70,7 +70,11 @@
 		<property name="DEBUG" value="on"/>
 
 		<!-- Build class files -->
-		<javac destdir="${temp.folder}/ws/win32/swt.jar.bin" srcdir="${temp.folder}/ws/win32/swt.jar.bin" verbose="${javacVerbose}" debug="${DEBUG}" failonerror="yes" bootclasspath="${bootclasspath}"/>
+		<javac destdir="${temp.folder}/ws/win32/swt.jar.bin" srcdir="${temp.folder}/ws/win32/swt.jar.bin" verbose="${javacVerbose}" debug="${DEBUG}" failonerror="no" bootclasspath="${bootclasspath}">
+			<compilerarg line="${compilerArg}" compiler="${build.compiler}"/>
+			<compilerarg value="@${basedir}/javaCompiler...args" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+			<compilerarg line="-log '${temp.folder}/@dot.bin${logExtension}'" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+		</javac>
 		
 		<!-- Create resulting jar file into result folder -->
 		<mkdir dir="${build.result.folder}/ws/win32/"/>
