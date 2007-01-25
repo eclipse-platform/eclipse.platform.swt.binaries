@@ -64,7 +64,9 @@
 			<src path="${plugindir}/Eclipse SWT AWT/common/"/>
 			<src path="${plugindir}/Eclipse SWT AWT/win32/"/>
 			<src path="${plugindir}/Eclipse SWT Browser/common/"/>
-			<src path="${plugindir}/Eclipse SWT Browser/win32/"/>    
+			<src path="${plugindir}/Eclipse SWT Browser/win32/"/>
+			<src path="${plugindir}/Eclipse SWT Mozilla/common/"/>
+			<src path="${plugindir}/Eclipse SWT Mozilla/win32/"/>
 			<src path="${plugindir}/Eclipse SWT Custom Widgets/common/"/>
 			<src path="${plugindir}/Eclipse SWT Drag and Drop/common/"/>
 			<src path="${plugindir}/Eclipse SWT Drag and Drop/win32/"/>
@@ -94,6 +96,8 @@
 			<fileset dir="${plugindir}/Eclipse SWT AWT/win32/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/win32/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/win32/" includes="${includes}" excludes="${excludes}"/>
@@ -138,6 +142,8 @@
 			<fileset dir="${plugindir}/Eclipse SWT AWT/win32/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/win32/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/win32/" includes="**/*.java" excludes=""/>
