@@ -70,7 +70,8 @@
 			<src path="${basedir}/src/Eclipse SWT AWT/common/"/>
 			<src path="${basedir}/src/Eclipse SWT AWT/gtk/"/>
 			<src path="${basedir}/src/Eclipse SWT Browser/common/"/>
-			<src path="${basedir}/src/Eclipse SWT Browser/mozilla/"/>
+			<src path="${basedir}/src/Eclipse SWT Mozilla/common/"/>
+			<src path="${basedir}/src/Eclipse SWT Mozilla/gtk/"/>
 			<src path="${basedir}/src/Eclipse SWT Custom Widgets/common/"/>
 			<src path="${basedir}/src/Eclipse SWT Drag and Drop/common/"/>
 			<src path="${basedir}/src/Eclipse SWT Drag and Drop/gtk/"/>
@@ -107,7 +108,8 @@
 			<fileset dir="${basedir}/src/Eclipse SWT AWT/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT AWT/gtk/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${basedir}/src/Eclipse SWT Browser/mozilla/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/gtk/" includes="${includes}" excludes="${excludes}"/>
@@ -186,7 +188,8 @@
 			<fileset dir="${basedir}/src/Eclipse SWT AWT/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT AWT/gtk/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT Browser/mozilla/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/gtk/" includes="**/*.java" excludes=""/>
