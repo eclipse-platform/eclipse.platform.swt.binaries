@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="org.eclipse.swt.win32.win32.x86" default="build.jars" basedir=".">
+<project name="org.eclipse.swt.win32.wpf.x86" default="build.jars" basedir=".">
 
 	<target name="init" depends="properties">
-		<property name="ws" value="win32"/>
+		<property name="ws" value="wpf"/>
 		<property name="os" value="win32"/>
 		<property name="arch" value="x86"/>
-		<property name="fragment" value="org.eclipse.swt.win32.win32.x86"/>
+		<property name="fragment" value="org.eclipse.swt.win32.wpf.x86"/>
 		<property name="version.suffix" value="3.3.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
@@ -57,26 +57,30 @@
 		<javac destdir="${temp.folder}/@dot.bin" verbose="${javacVerbose}" debug="on" failonerror="no" classpath="${plugindir}/extra_jars/exceptions.jar" bootclasspath="${bundleBootClasspath}" source="${bundleJavacSource}" target="${bundleJavacTarget}">
 			<src path="${plugindir}/Eclipse SWT/common/"/>
 			<src path="${plugindir}/Eclipse SWT/common_j2se/"/>
-			<src path="${plugindir}/Eclipse SWT/win32/"/>
+			<src path="${plugindir}/Eclipse SWT/wpf/"/>
+			<src path="${plugindir}/Eclipse SWT/emulated/datetime/"/>
+			<src path="${plugindir}/Eclipse SWT/emulated/coolbar/"/>
+			<src path="${plugindir}/Eclipse SWT/emulated/bidi/"/>
+			<src path="${plugindir}/Eclipse SWT/emulated/tooltip/"/>
+			<src path="${plugindir}/Eclipse SWT/emulated/tray/"/>
 			<src path="${plugindir}/Eclipse SWT Accessibility/common/"/>
-			<src path="${plugindir}/Eclipse SWT Accessibility/win32/"/>
+			<src path="${plugindir}/Eclipse SWT Accessibility/emulated/"/>
 			<src path="${plugindir}/Eclipse SWT AWT/common/"/>
-			<src path="${plugindir}/Eclipse SWT AWT/win32/"/>
+			<src path="${plugindir}/Eclipse SWT AWT/emulated/"/>
 			<src path="${plugindir}/Eclipse SWT Browser/common/"/>
-			<src path="${plugindir}/Eclipse SWT Browser/win32/"/>    
 			<src path="${plugindir}/Eclipse SWT Custom Widgets/common/"/>
 			<src path="${plugindir}/Eclipse SWT Drag and Drop/common/"/>
-			<src path="${plugindir}/Eclipse SWT Drag and Drop/win32/"/>
-			<src path="${plugindir}/Eclipse SWT OLE Win32/win32/"/>
-			<src path="${plugindir}/Eclipse SWT OpenGL/win32/"/>
+			<src path="${plugindir}/Eclipse SWT Drag and Drop/emulated/"/>
+			<src path="${plugindir}/Eclipse SWT OpenGL/emulated/"/>
 			<src path="${plugindir}/Eclipse SWT OpenGL/common/"/>
 			<src path="${plugindir}/Eclipse SWT PI/common_j2se/"/>
-			<src path="${plugindir}/Eclipse SWT PI/win32/"/>
+			<src path="${plugindir}/Eclipse SWT PI/common/"/>
+			<src path="${plugindir}/Eclipse SWT PI/wpf/"/>
 			<src path="${plugindir}/Eclipse SWT Printing/common/"/>
-			<src path="${plugindir}/Eclipse SWT Printing/win32/"/>
+			<src path="${plugindir}/Eclipse SWT Printing/wpf/"/>
 			<src path="${plugindir}/Eclipse SWT Program/common/"/>
-			<src path="${plugindir}/Eclipse SWT Program/win32/"/>
-			<src path="${plugindir}/Eclipse SWT Theme/win32/"/>
+			<src path="${plugindir}/Eclipse SWT Program/wpf/"/>
+			<src path="${plugindir}/Eclipse SWT Theme/emulated/"/>
 			<compilerarg line="-log '${temp.folder}'/@dot.bin${logExtension}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
 		</javac>
         <property name="includes" value=""/>
@@ -84,26 +88,30 @@
 		<copy todir="${temp.folder}/@dot.bin">
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/wpf/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/datetime/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Browser/win32/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/win32/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT OLE Win32/win32/" includes="${includes}" excludes="${excludes}"/>			
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/emulated/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>			
-			<fileset dir="${plugindir}/Eclipse SWT PI/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/wpf/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Printing/wpf/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/win32/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Theme/win32/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/wpf/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
 
 		<mkdir dir="${build.result.folder}/@dot"/>
@@ -126,29 +134,32 @@
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/wpf/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/datetime" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/win32/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/win32/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Browser/win32/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/win32/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT OLE Win32/win32/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/win32/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/win32/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/emulated/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/win32/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/win32/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/library/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/wpf/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/wpf/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Printing/wpf/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/win32/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Theme/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/wpf/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
 			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>
