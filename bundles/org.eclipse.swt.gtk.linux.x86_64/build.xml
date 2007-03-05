@@ -251,6 +251,7 @@
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/library"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/library"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/gtk/library"/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common/library"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/cde/library"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Program/gnome/library"/>
 		</copy>
