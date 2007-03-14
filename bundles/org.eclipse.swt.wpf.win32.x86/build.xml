@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="org.eclipse.swt.win32.wpf.x86" default="build.jars" basedir=".">
+<project name="org.eclipse.swt.wpf.win32.x86" default="build.jars" basedir=".">
 
 	<target name="init" depends="properties">
 		<property name="ws" value="wpf"/>
 		<property name="os" value="win32"/>
 		<property name="arch" value="x86"/>
-		<property name="fragment" value="org.eclipse.swt.win32.wpf.x86"/>
+		<property name="fragment" value="org.eclipse.swt.wpf.win32.x86"/>
 		<property name="version.suffix" value="3.3.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
