@@ -67,9 +67,10 @@
 			<src path="${plugindir}/Eclipse SWT AWT/common/"/>
 			<src path="${plugindir}/Eclipse SWT AWT/emulated/"/>
 			<src path="${plugindir}/Eclipse SWT Browser/common/"/>
+			<src path="${plugindir}/Eclipse SWT Browser/forms/"/>
 			<src path="${plugindir}/Eclipse SWT Custom Widgets/common/"/>
 			<src path="${plugindir}/Eclipse SWT Drag and Drop/common/"/>
-			<src path="${plugindir}/Eclipse SWT Drag and Drop/emulated/"/>
+			<src path="${plugindir}/Eclipse SWT Drag and Drop/wpf/"/>
 			<src path="${plugindir}/Eclipse SWT OpenGL/emulated/"/>
 			<src path="${plugindir}/Eclipse SWT OpenGL/common/"/>
 			<src path="${plugindir}/Eclipse SWT PI/common_j2se/"/>
@@ -97,9 +98,10 @@
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Browser/forms/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/emulated/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/wpf/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>			
@@ -142,9 +144,10 @@
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Browser/forms/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/emulated/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/wpf/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
