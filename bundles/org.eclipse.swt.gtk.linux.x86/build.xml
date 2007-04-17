@@ -255,7 +255,6 @@
 	<target name="swtdownload" depends="init">
 		<delete dir="${temp.folder}"/>
 		<mkdir dir="${temp.folder}/swtdownload/"/>
-
 		<antcall target="build.jars">
 			<param name="debug" value="true"/>
 			<param name="jar.filename" value="swt-debug.jar"/>
@@ -263,14 +262,12 @@
 		<jar jarfile="${build.result.folder}/swt-debug.jar" basedir="${basedir}" update="true" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
 		<copy file="${build.result.folder}/swt-debug.jar" todir="${temp.folder}/swtdownload"/>
 		<delete dir="${build.result.folder}/@dot"/>   <!-- this is needed to re-enter @dot -->
-
 		<antcall target="build.jars">
 			<param name="debug" value="false"/>
 			<param name="jar.filename" value="swt.jar"/>
 		</antcall>
 		<jar jarfile="${build.result.folder}/swt.jar" basedir="${basedir}" update="true" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
 		<copy file="${build.result.folder}/swt.jar" todir="${temp.folder}/swtdownload"/>
-		
 		<antcall target="build.sources"/>
 		<copy file="${build.result.folder}/src.zip" todir="${temp.folder}/swtdownload"/>
 		<copy file="${plugindir}/build/.project" todir="${temp.folder}/swtdownload"/>
@@ -278,7 +275,6 @@
 		<copy todir="${temp.folder}/swtdownload">
 			<fileset dir="${basedir}" includes="about.html,about_files/"/>
 		</copy>
-
 		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip">
 			<zipfileset dir="${temp.folder}/swtdownload/"/>
 		</zip>

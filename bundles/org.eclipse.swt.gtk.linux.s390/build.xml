@@ -53,9 +53,11 @@
 
 	<target name="@dot" depends="init" unless="@dot" description="Create jar: @dot.">
 		<property name="destdir" value="${temp.folder}/@dot.bin"/>
+		<property name="debug" value="true"/>
+		<property name="jar.filename" value="swt.jar"/>
 		<delete dir="${temp.folder}/@dot.bin"/>
 		<mkdir dir="${temp.folder}/@dot.bin"/>
-		<javac destdir="${temp.folder}/@dot.bin" verbose="${javacVerbose}" debug="on" failonerror="no" classpath="${plugindir}/extra_jars/exceptions.jar" bootclasspath="${bundleBootClasspath}" source="${bundleJavacSource}" target="${bundleJavacTarget}">
+		<javac destdir="${temp.folder}/@dot.bin" verbose="${javacVerbose}" debug="${debug}" failonerror="no" classpath="${plugindir}/extra_jars/exceptions.jar" bootclasspath="${bundleBootClasspath}" source="${bundleJavacSource}" target="${bundleJavacTarget}">
 			<src path="${plugindir}/Eclipse SWT/cairo/"/>
 			<src path="${plugindir}/Eclipse SWT/common/"/>
 			<src path="${plugindir}/Eclipse SWT/common_j2se/"/>
@@ -133,7 +135,7 @@
 			<fileset dir="${temp.folder}/@dot.bin"/>
 		</copy>
 		<!-- prepare a jar file solely for the download target -->
-		<jar jarfile="${build.result.folder}/swt.jar" basedir="${temp.folder}/@dot.bin"/>
+		<jar jarfile="${build.result.folder}/${jar.filename}" basedir="${temp.folder}/@dot.bin"/>
 		<delete dir="${temp.folder}/@dot.bin"/>
 	</target>
 
@@ -253,7 +255,17 @@
 	<target name="swtdownload" depends="init">	
 		<delete dir="${temp.folder}"/>
 		<mkdir dir="${temp.folder}/swtdownload/"/>
-		<antcall target="build.jars"/>
+		<antcall target="build.jars">
+			<param name="debug" value="true"/>
+			<param name="jar.filename" value="swt-debug.jar"/>
+		</antcall>
+		<jar jarfile="${build.result.folder}/swt-debug.jar" basedir="${basedir}" update="true" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
+		<copy file="${build.result.folder}/swt-debug.jar" todir="${temp.folder}/swtdownload"/>
+		<delete dir="${build.result.folder}/@dot"/>   <!-- this is needed to re-enter @dot -->
+		<antcall target="build.jars">
+			<param name="debug" value="false"/>
+			<param name="jar.filename" value="swt.jar"/>
+		</antcall>
 		<jar jarfile="${build.result.folder}/swt.jar" basedir="${basedir}" update="true" includes="swt*.dll,libswt*.so,libswt*.sl,libswt*.a,libswt*.jnilib,libXm.so.2"/>
 		<copy file="${build.result.folder}/swt.jar" todir="${temp.folder}/swtdownload"/>
 		<antcall target="build.sources"/>
