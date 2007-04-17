@@ -229,6 +229,7 @@
 	
 	<target name="swtdownload" depends="init">	
 		<delete dir="${temp.folder}"/>
+		<delete dir="${build.result.folder}/@dot"/>   <!-- ensure entry into @dot target -->
 		<mkdir dir="${temp.folder}/swtdownload/"/>
 		<antcall target="build.jars">
 			<param name="debug" value="true"/>
