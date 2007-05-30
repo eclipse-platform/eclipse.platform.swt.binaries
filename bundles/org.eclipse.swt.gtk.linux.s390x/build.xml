@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="org.eclipse.swt.gtk.linux.S390x" default="build.nativeLibraries" basedir=".">
+<project name="org.eclipse.swt.gtk.linux.s390x" default="build.nativeLibraries" basedir=".">
 
 	<target name="init" depends="properties">
 		<property name="compilerArg" value=""/>
 		<property name="ws" value="gtk"/>
 		<property name="os" value="linux"/>
-		<property name="arch" value="S390x"/>
-		<property name="fragment" value="org.eclipse.swt.gtk.linux.S390x"/>
+		<property name="arch" value="s390x"/>
+		<property name="fragment" value="org.eclipse.swt.gtk.linux.s390x"/>
 		<property name="version.suffix" value="3.3.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
