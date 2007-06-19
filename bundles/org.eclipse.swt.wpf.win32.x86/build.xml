@@ -64,7 +64,6 @@
 			<src path="${plugindir}/Eclipse SWT/emulated/datetime/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/bidi/"/>
 			<src path="${plugindir}/Eclipse SWT/emulated/tooltip/"/>
-			<src path="${plugindir}/Eclipse SWT/emulated/tray/"/>
 			<src path="${plugindir}/Eclipse SWT Accessibility/common/"/>
 			<src path="${plugindir}/Eclipse SWT Accessibility/emulated/"/>
 			<src path="${plugindir}/Eclipse SWT AWT/common/"/>
@@ -96,7 +95,6 @@
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/datetime/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="${includes}" excludes="${excludes}"/>
@@ -142,7 +140,6 @@
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/datetime" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/tray" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
