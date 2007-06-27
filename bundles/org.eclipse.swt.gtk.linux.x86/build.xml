@@ -200,7 +200,8 @@
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/gtk/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/gtk/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/gtk/library/" excludes="**/*.sh"/>
+			<zipfileset filemode="755" dir="${plugindir}/Eclipse SWT PI/gtk/library/" includes="**/*.sh"/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/cde/" includes="**/*.java" excludes=""/>
