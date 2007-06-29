@@ -78,6 +78,7 @@
 			<src path="${plugindir}/Eclipse SWT PI/common_j2se/"/>
 			<src path="${plugindir}/Eclipse SWT PI/common/"/>
 			<src path="${plugindir}/Eclipse SWT PI/wpf/"/>
+			<src path="${plugindir}/Eclipse SWT PI/wpf_win32/"/>
 			<src path="${plugindir}/Eclipse SWT Printing/common/"/>
 			<src path="${plugindir}/Eclipse SWT Printing/wpf/"/>
 			<src path="${plugindir}/Eclipse SWT Program/common/"/>
@@ -109,6 +110,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>			
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/wpf/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/wpf_win32/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/wpf/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
@@ -155,7 +157,9 @@
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/wpf/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/wpf_win32/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/wpf/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/wpf_win32/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/wpf/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
