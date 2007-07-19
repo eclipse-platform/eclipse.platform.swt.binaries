@@ -151,9 +151,6 @@
 	<target name="replace.32.to.64" depends="init">
 			<echo>Converting java files to 64 bit in org.eclipse.swt project</echo>
 			<!-- Convert SWT 32 bit java source to 64 bit  -->
-
-
-
 			<replace dir="${plugindir}" includes="**/*.java" token="int /*long*/" value="long /*int*/"/>
 
 	</target>
@@ -211,8 +208,6 @@
 	<target name="build.cfiles" depends="build.jars">
 		<!-- generate the C code from the (64 bit) SWT PI java classes -->
 		<!-- assumes the swt.jar has already been built  -->
-		<!--<mkdir dir="../JNI Generation/org/eclipse/swt/tools/internal/" />-->
-		<echo>Generating C</echo>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
 			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
 			fork="true"
@@ -221,7 +216,6 @@
 			<arg value="src/Eclipse SWT PI/common/library/"/>
 			<arg value="${build.result.folder}/swt.jar"/>
 		</java>
-		<echo>Generating OS</echo>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
 			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
 			fork="true"
@@ -230,7 +224,6 @@
 			<arg value="src/Eclipse SWT PI/win32/library/"/>
 			<arg value="${build.result.folder}/swt.jar"/>
 		</java>
-		<echo>Generating Gdip</echo>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
 			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
 			fork="true"
@@ -239,7 +232,6 @@
 			<arg value="src/Eclipse SWT PI/win32/library/"/>
 			<arg value="${build.result.folder}/swt.jar"/>
 		</java>
-		<echo>Generating COM</echo>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
 			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
 			fork="true"
@@ -248,7 +240,6 @@
 			<arg value="src/Eclipse SWT PI/win32/library/"/>
 			<arg value="${build.result.folder}/swt.jar"/>
 		</java>
-		<echo>Generating WGL</echo>
 		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
 			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
 			fork="true"
