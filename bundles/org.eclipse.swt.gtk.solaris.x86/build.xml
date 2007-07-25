@@ -7,7 +7,7 @@
 		<property name="os" value="solaris"/>
 		<property name="arch" value="x86"/>
 		<property name="fragment" value="org.eclipse.swt.gtk.solaris.x86"/>
-		<property name="version.suffix" value="3.2.0.v3232b"/>
+		<property name="version.suffix" value="3.3.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
 		<property name="plugin.destination" value="${basedir}"/>
@@ -166,6 +166,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/gtk/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
