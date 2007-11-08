@@ -157,6 +157,40 @@
 		</zip>
 	</target>
 
+	<target name="copy.src" depends="init">
+		<copy todir="${destination.temp.folder}/" failonerror="true" overwrite="true">
+			<fileset dir="${plugindir}/Eclipse SWT/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/win32/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/win32/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OLE Win32/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Accessibility/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/win32/library/"/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Printing/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Browser/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
+			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>
+		</copy>
+	</target>
+		
 	<target name="build.sources" depends="init">
 		<available property="src.zip" file="${build.result.folder}/src.zip"/>
 		<antcall target="src.zip"/>
@@ -173,6 +207,13 @@
 		</copy>
 	</target>
 
+	<target name="gather.individual.sources" depends="init">
+		<antcall target="copy.src"/>
+		<copy todir="${destination.temp.folder}">
+			<fileset dir="${basedir}" includes="about.html,about_files/"/>
+		</copy>
+	</target>
+			
 	<target name="gather.logs" depends="init" if="destination.temp.folder">
 		<mkdir dir="${destination.temp.folder}/${full.name}"/>
 		<copy file="${temp.folder}/@dot.bin${logExtension}" todir="${destination.temp.folder}/${full.name}/"/>
