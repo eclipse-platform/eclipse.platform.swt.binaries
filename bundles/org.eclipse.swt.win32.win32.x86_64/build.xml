@@ -175,6 +175,7 @@
 			<fileset dir="${basedir}/src/Eclipse SWT AWT/win32/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Browser/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/win32/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
@@ -213,6 +214,7 @@
 			<fileset dir="${basedir}/src/Eclipse SWT AWT/win32/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Browser/win32/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/win32/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
