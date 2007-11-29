@@ -183,11 +183,10 @@
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/motif/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/library/"/>
@@ -240,11 +239,10 @@
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/motif/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/motif/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/library/"/>

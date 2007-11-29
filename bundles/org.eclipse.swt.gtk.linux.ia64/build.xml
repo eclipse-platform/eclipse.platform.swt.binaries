@@ -192,12 +192,10 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/gtk/" includes="**/*.java" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library/"/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/library/"/>
@@ -241,12 +239,10 @@
 			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library/"/>
 			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/gtk/" includes="**/*.java" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library/"/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/gtk/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/" includes="**/*.java" excludes=""/>
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/library/"/>
