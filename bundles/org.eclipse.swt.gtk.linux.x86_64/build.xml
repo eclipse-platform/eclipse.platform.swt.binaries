@@ -339,7 +339,7 @@
 		</copy>
 	</target>
 
-	<target name="gather.individual.sources" depends="init">
+	<target name="gather.individual.sources" depends="build.cfiles">
 		<antcall target="copy.src"/>
 		<copy todir="${destination.temp.folder}">
 			<fileset dir="${basedir}" includes="about.html,about_files/"/>
