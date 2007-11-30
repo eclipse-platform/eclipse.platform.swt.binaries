@@ -77,8 +77,6 @@
 			<src path="${basedir}/src/Eclipse SWT Custom Widgets/common/"/>
 			<src path="${basedir}/src/Eclipse SWT Drag and Drop/common/"/>
 			<src path="${basedir}/src/Eclipse SWT Drag and Drop/gtk/"/>
-			<src path="${basedir}/src/Eclipse SWT Mozilla/gtk/"/>
-			<src path="${basedir}/src/Eclipse SWT Mozilla/common/"/>
 			<src path="${basedir}/src/Eclipse SWT OpenGL/gtk/"/>
 			<src path="${basedir}/src/Eclipse SWT OpenGL/glx/"/>
 			<src path="${basedir}/src/Eclipse SWT OpenGL/common/"/>
@@ -118,8 +116,6 @@
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/gtk/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/glx/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/gtk/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/cairo/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${basedir}/src/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>

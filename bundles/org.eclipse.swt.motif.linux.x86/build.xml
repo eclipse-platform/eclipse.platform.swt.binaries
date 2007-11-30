@@ -81,7 +81,6 @@
 			<src path="${plugindir}/Eclipse SWT Custom Widgets/common/"/>
 			<src path="${plugindir}/Eclipse SWT Drag and Drop/common/"/>
 			<src path="${plugindir}/Eclipse SWT Drag and Drop/motif/"/>
-			<src path="${plugindir}/Eclipse SWT Mozilla/common/"/>
 			<src path="${plugindir}/Eclipse SWT OpenGL/motif/"/>
 			<src path="${plugindir}/Eclipse SWT OpenGL/glx/"/>
 			<src path="${plugindir}/Eclipse SWT OpenGL/common/"/>
@@ -126,7 +125,6 @@
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/motif/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/motif/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="${includes}" excludes="${excludes}"/>
