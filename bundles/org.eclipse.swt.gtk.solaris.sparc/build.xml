@@ -166,6 +166,10 @@
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
@@ -209,6 +213,10 @@
 			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/gtk/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT OpenGL/glx/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/cairo/library/"/>
 			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
