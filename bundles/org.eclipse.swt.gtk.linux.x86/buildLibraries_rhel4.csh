@@ -1,10 +1,10 @@
 # This file should be run on RHEL4
 
-# Use this file (gtk.linux.x86_rhel4.csh) to compile and release only these 3 libraries:
+# Use this file (buildLibraries_rhel4.csh) to compile and release only these 3 libraries:
 #   libswt-mozilla-gtk-XXXX.so
 #   libswt-xpcominit-gtk-XXXX.so
 #   libswt-xulrunner-gtk-XXXX.so
-# Use gtk.linux.x86_rhel3.csh to compile and release the remaining libraries
+# Use buildLibraries_rhel3.csh to compile and release the remaining libraries
 
 echo Building Mozilla X86 GTK on RHEL4
 

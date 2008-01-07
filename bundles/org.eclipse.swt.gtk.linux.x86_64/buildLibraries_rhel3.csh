@@ -3,11 +3,11 @@
 # before running this file the replace.32.to.64 and build.cfiles targets
 # in this project's build.xml ant script must be run first
 
-# Use gtk.linux.x86_64_rhel4.csh to compile and release only these 3 libraries:
+# Use buildLibraries_rhel4.csh to compile and release only these 3 libraries:
 #   libswt-mozilla-gtk-XXXX.so
 #   libswt-xpcominit-gtk-XXXX.so
 #   libswt-xulrunner-gtk-XXXX.so
-# Use this file (gtk.linux.x86_64_rhel3.csh) to compile and release the remaining libraries
+# Use this file (buildLibraries_rhel3.csh) to compile and release the remaining libraries
 
 echo Building LINUX X86 GTK on RHEL3
 
