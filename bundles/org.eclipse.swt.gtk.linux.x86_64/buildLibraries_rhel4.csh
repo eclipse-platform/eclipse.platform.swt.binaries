@@ -15,7 +15,6 @@ setenv XULRUNNER_SDK /bluebird/teamswt/swt-builddir/xulrunner/1.8.0.1/amd64/mozi
 
 setenv MOZILLA_INCLUDES "-include ${MOZILLA_SDK}/include/mozilla-config.h -I${MOZILLA_SDK}/include"
 setenv MOZILLA_LIBS "-L${MOZILLA_SDK}/lib -L${MOZILLA_SDK}/bin -lxpcom -lnspr4 -lplds4 -lplc4"
-setenv PKG_CONFIG_PATH /usr/lib64/pkgconfig
 setenv XULRUNNER_INCLUDES "-include ${XULRUNNER_SDK}/include/mozilla-config.h -I${XULRUNNER_SDK}/include"
 setenv XULRUNNER_LIBS "-L${XULRUNNER_SDK}/lib -lxpcomglue"
 
@@ -23,9 +22,3 @@ cd src/bin/library/
 sh build.sh clean
 sh build.sh make_mozilla make_xulrunner make_xpcominit
 cp lib* ../../../.
-
-#cd ../../../
-#rm swt.jar
-#rm -rf @dot
-#rm -rf src
-#rm -rf temp.folder

@@ -1,7 +1,4 @@
-echo Building HPUX IA64_32 Motif
-
-# These variables must be set to reflect the compilation context
-setenv JAVA_HOME /opt/jdk14101
+echo Building HPUX PA_RISC Motif
 
 cd ../org.eclipse.swt/bin/library/
 sh build.sh clean
