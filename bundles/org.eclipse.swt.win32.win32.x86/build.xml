@@ -87,7 +87,7 @@
 			<compilerarg line="${compilerArg}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/>
 		</javac>
         <property name="includes" value=""/>
-        <property name="excludes" value="**/*.java,**/library/,**/package.htm*,**/*.@properties@"/>
+        <property name="excludes" value="**/*.java,**/library/,**/package.htm*,**/*._properties"/>
 		<copy todir="${temp.folder}/@dot.bin">
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="${includes}" excludes="${excludes}"/>
@@ -212,11 +212,11 @@
 	
 	<target name="copy.translationfiles" if="includetranslationfiles">
 		<copy todir="${temp.folder}/@dot.bin" overwrite="true">
-			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.@properties@" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*._properties" excludes=""/>
 		</copy>
 		<move todir="${temp.folder}/@dot.bin" overwrite="true">
-			<fileset dir="${temp.folder}/@dot.bin/" includes="**/*.@properties@" excludes=""/>
-			<mapper type="glob" from="*.@properties@" to="*.properties"/>
+			<fileset dir="${temp.folder}/@dot.bin/" includes="**/*._properties" excludes=""/>
+			<mapper type="glob" from="*._properties" to="*.properties"/>
 		</move>
 	</target>
 
