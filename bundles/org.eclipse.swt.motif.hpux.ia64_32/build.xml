@@ -100,7 +100,7 @@
 			<compilerarg line="${compilerArg}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 		</javac>
         <property name="includes" value=""/>
-        <property name="excludes" value="**/*.java,**/library/,**/package.htm*"/>
+        <property name="excludes" value="**/*.java,**/library/,**/package.htm*,**/*._properties"/>
 		<copy todir="${temp.folder}/@dot.bin">
 			<fileset dir="${plugindir}/Eclipse SWT/cairo/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
@@ -140,6 +140,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
+		<antcall target="copy.translationfiles"/>
 
 		<mkdir dir="${build.result.folder}/@dot"/>
 		<copy todir="${build.result.folder}/@dot" failonerror="true">
@@ -310,6 +311,7 @@
 		<delete dir="${temp.folder}"/>
 		<delete dir="${build.result.folder}/@dot"/>   <!-- ensure entry into @dot target -->
 		<mkdir dir="${temp.folder}/swtdownload/"/>
+		<property name="includetranslationfiles" value="true"/>
 		<antcall target="build.jars">
 			<param name="debug" value="true"/>
 			<param name="jar.filename" value="swt-debug.jar"/>
@@ -364,5 +366,15 @@
 		</delete>
 		<zip zipfile="${plugin.destination}/${full.name}.zip" basedir="${temp.folder}" filesonly="true"/>
 		<delete dir="${temp.folder}"/>
+	</target>
+
+	<target name="copy.translationfiles" if="includetranslationfiles">
+		<copy todir="${temp.folder}/@dot.bin" overwrite="true">
+			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*._properties" excludes=""/>
+		</copy>
+		<move todir="${temp.folder}/@dot.bin" overwrite="true">
+			<fileset dir="${temp.folder}/@dot.bin/" includes="**/*._properties" excludes=""/>
+			<mapper type="glob" from="*._properties" to="*.properties"/>
+		</move>
 	</target>
 </project>
