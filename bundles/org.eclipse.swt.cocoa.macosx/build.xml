@@ -67,7 +67,7 @@
 			<src path="${plugindir}/Eclipse SWT Accessibility/common/"/>
 			<src path="${plugindir}/Eclipse SWT Accessibility/emulated/"/>
 			<src path="${plugindir}/Eclipse SWT AWT/common/"/>
-			<src path="${plugindir}/Eclipse SWT AWT/emulated/"/>
+			<src path="${plugindir}/Eclipse SWT AWT/cocoa/"/>
 			<src path="${plugindir}/Eclipse SWT Browser/cocoa/"/>
 			<src path="${plugindir}/Eclipse SWT Browser/common/"/>
 			<src path="${plugindir}/Eclipse SWT Mozilla/cocoa/"/>
@@ -101,7 +101,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/emulated/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/cocoa/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/cocoa/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/cocoa/" includes="${includes}" excludes="${excludes}"/>
@@ -150,7 +150,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/emulated/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/cocoa/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/cocoa/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/cocoa/" includes="**/*.java" excludes=""/>
@@ -190,7 +190,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Accessibility/emulated/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/emulated/" includes="**/*.java" excludes=""/>
+			<fileset dir="${plugindir}/Eclipse SWT AWT/cocoa/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/cocoa/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
 			<fileset dir="${plugindir}/Eclipse SWT Mozilla/cocoa/" includes="**/*.java" excludes=""/>
