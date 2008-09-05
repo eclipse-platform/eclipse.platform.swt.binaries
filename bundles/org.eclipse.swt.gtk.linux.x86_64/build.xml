@@ -162,12 +162,14 @@
 			<echo>Converting java files to 64 bit in org.eclipse.swt project</echo>
 			<!-- Convert SWT 32 bit java source to 64 bit  -->
 			<replace dir="${plugindir}" includes="**/*.java" token="int /*long*/" value="long /*int*/"/>
+			<antcall target="refresh"/>
 	</target>
 
 	<target name="replace.64.to.32" depends="init">
 			<echo>Converting java files to 32 bit in org.eclipse.swt project</echo>
 			<!-- Convert SWT 64 bit java source to 32 bit  -->
 			<replace dir="${plugindir}" includes="**/*.java" token="long /*int*/" value="int /*long*/"/>
+			<antcall target="refresh"/>
 	</target>
 
 	<target name="src.zip" depends="init" unless="src.zip">
@@ -348,6 +350,7 @@
 	</target>
 
 	<target name="refresh" depends="init" if="eclipse.running">
+		<eclipse.refreshLocal resource="${plugindir}" depth="infinite"/>
 		<eclipse.refreshLocal resource="${fragment}" depth="infinite"/>
 	</target>
 
