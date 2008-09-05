@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="org.eclipse.swt.win32.win32.x86_64" default="build.nativeLibraries" basedir=".">
+<project name="org.eclipse.swt.win32.win32.x86_64" default="build.jars" basedir=".">
 
 	<target name="init" depends="properties">
 		<property name="compilerArg" value=""/>
@@ -240,81 +240,9 @@
 		</copy>
 	</target>
 		
-	<target name="build.sources" depends="build.cfiles">
+	<target name="build.sources">
 		<available property="src.zip" file="${build.result.folder}/src.zip"/>
 		<antcall target="src.zip"/>
-	</target>
-
-	<target name="build.cfiles" depends="build.jars">
-		<!-- generate the C code from the (64 bit) SWT PI java classes -->
-		<!-- assumes the swt.jar has already been built  -->
-		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
-			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
-			fork="true"
-			dir="${basedir}">
-			<arg value="org.eclipse.swt.internal.C"/>
-			<arg value="src/Eclipse SWT PI/common/library/"/>
-			<arg value="${build.result.folder}/swt.jar"/>
-		</java>
-		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
-			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
-			fork="true"
-			dir="${basedir}">
-			<arg value="org.eclipse.swt.internal.win32.OS"/>
-			<arg value="src/Eclipse SWT PI/win32/library/"/>
-			<arg value="${build.result.folder}/swt.jar"/>
-		</java>
-		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
-			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
-			fork="true"
-			dir="${basedir}">
-			<arg value="org.eclipse.swt.internal.gdip.Gdip"/>
-			<arg value="src/Eclipse SWT PI/win32/library/"/>
-			<arg value="${build.result.folder}/swt.jar"/>
-		</java>
-		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
-			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
-			fork="true"
-			dir="${basedir}">
-			<arg value="org.eclipse.swt.internal.ole.win32.COM"/>
-			<arg value="src/Eclipse SWT PI/win32/library/"/>
-			<arg value="${build.result.folder}/swt.jar"/>
-		</java>
-		<java classname="org.eclipse.swt.tools.internal.JNIGeneratorApp" 
-			classpath="${toolsplugindir}/bin:${toolsplugindir}/swttools.jar:${basedir}/swt.jar"
-			fork="true"
-			dir="${basedir}">
-			<arg value="org.eclipse.swt.internal.opengl.win32.WGL"/>
-			<arg value="src/Eclipse SWT OpenGL/win32/library/"/>
-			<arg value="${build.result.folder}/swt.jar"/>
-		</java>
-
-		<!-- copy all the files into /library folders into a temporary bin/library folder  -->
-		<!-- since this is the structure assumed by the native makefile and given that     -->
-		<!-- this script needs to work outside of the Eclipse workspace without modifying  -->
-		<!-- the content of the org.eclipse.swt project.                                   -->
-		<mkdir dir="${basedir}/src/bin/library"/>
-		<copy todir="${basedir}/src/bin/library">
-			<fileset dir="${basedir}/src/Eclipse SWT/common/library"/>
-			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/library"/>
-			<fileset dir="${basedir}/src/Eclipse SWT AWT/win32/library"/>
-			<fileset dir="${basedir}/src/Eclipse SWT PI/win32/library/"/>
-			<fileset dir="${basedir}/src/Eclipse SWT PI/common/library/"/>
-			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/win32/library/"/>
-		</copy>	
-	</target>
-
-	<target name="build.nativeLibraries" depends="build.cfiles" description="Build 64 bit native libraries without changing the content of org.eclipse.swt">
-		<property name="sourcedir" value="${basedir}/src/bin/library" />
-	    <property name="lib_destdir" value="${sourcedir}/../../../../${fragment}" />
-		<tstamp/>
-		<exec dir="${sourcedir}" executable="${sourcedir}/build.bat">
-			<arg line="x86_64 clean all"/>
-		</exec>
-		<mkdir dir="${lib_destdir}"/>
-		<copy todir="${lib_destdir}">
-			<fileset dir="${sourcedir}/" includes="*.dll"/>
-		</copy>
 	</target>
 
 	<target name="build.zips" depends="init">
@@ -329,7 +257,7 @@
 		</copy>
 	</target>
 
-	<target name="gather.individual.sources" depends="build.cfiles">
+	<target name="gather.individual.sources">
 		<antcall target="copy.src"/>
 		<copy todir="${destination.temp.folder}">
 			<fileset dir="${basedir}" includes="about.html,about_files/"/>
