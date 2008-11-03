@@ -89,7 +89,7 @@
 			<compilerarg line="${compilerArg}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 		</javac>
         <property name="includes" value=""/>
-        <property name="excludes" value="**/*.java,**/library/,**/package.htm*,**/*._properties"/>
+        <property name="excludes" value="**/*.java,**/library/,**/package.htm*,**/*._properties,**/*.extras"/>
 		<copy todir="${temp.folder}/@dot.bin">
 			<fileset dir="${plugindir}/Eclipse SWT/cocoa/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
