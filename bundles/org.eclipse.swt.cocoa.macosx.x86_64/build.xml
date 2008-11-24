@@ -5,7 +5,7 @@
 		<property name="compilerArg" value=""/>
 		<property name="ws" value="cocoa"/>
 		<property name="os" value="macosx"/>
-		<property name="fragment" value="org.eclipse.swt.cocoa.macosx"/>
+		<property name="fragment" value="org.eclipse.swt.cocoa.macosx.x86_64"/>
 		<property name="version.suffix" value="3.5.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
