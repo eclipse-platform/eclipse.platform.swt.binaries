@@ -5,6 +5,7 @@
 		<property name="compilerArg" value=""/>
 		<property name="ws" value="cocoa"/>
 		<property name="os" value="macosx"/>
+		<property name="arch" value="x86_64"/>
 		<property name="fragment" value="org.eclipse.swt.cocoa.macosx.x86_64"/>
 		<property name="version.suffix" value="3.5.0"/>
 		<property name="full.name" value="${fragment}_${version.suffix}"/>
@@ -133,7 +134,36 @@
 
 	<target name="build.jars" depends="init">
 		<available property="@dot" file="${build.result.folder}/@dot"/>
+		<available property="source.present" file="${basedir}/src" type="dir" />
+		<antcall target="copy.source" />
 		<antcall target="@dot"/>
+	</target>
+
+	<target name="copy.source" unless="source.present">
+			<echo>Copying source from org.eclipse.swt project to folder ${basedir}/src folder ${temp.folder}.</echo>
+			<delete dir="${basedir}/src"/>
+			<mkdir dir="${basedir}/src"/>
+		
+			<!-- Copy the existing 32 bit SWT source folders to the 64 bit source folder -->
+			<copy todir="${basedir}/src">
+				<fileset dir="${plugindir}" includes="Eclipse*/**"/>
+			</copy>
+			<!-- Convert SWT 32 bit java source to 64 bit  -->
+			<replace dir="${basedir}/src" includes="**/*.java" token="int /*long*/" value="long /*int*/"/>
+	</target>
+	
+	<target name="replace.32.to.64" depends="init">
+			<echo>Converting java files to 64 bit in org.eclipse.swt project</echo>
+			<!-- Convert SWT 32 bit java source to 64 bit  -->
+			<replace dir="${plugindir}" includes="**/*.java" token="int /*long*/" value="long /*int*/"/>
+			<antcall target="refresh"/>
+	</target>
+
+	<target name="replace.64.to.32" depends="init">
+			<echo>Converting java files to 32 bit in org.eclipse.swt project</echo>
+			<!-- Convert SWT 64 bit java source to 32 bit  -->
+			<replace dir="${plugindir}" includes="**/*.java" token="long /*int*/" value="int /*long*/"/>
+			<antcall target="refresh"/>
 	</target>
 
 	<target name="src.zip" depends="init" unless="src.zip">
@@ -280,7 +310,7 @@
 		<copy todir="${temp.folder}/swtdownload">
 			<fileset dir="${basedir}" includes="about.html,about_files/"/>
 		</copy>
-		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}.zip">
+		<zip zipfile="${destination}/swt-${buildid}-${ws}-${os}-${arch}.zip">
 			<zipfileset dir="${temp.folder}/swtdownload/"/>
 		</zip>
 		<delete dir="${temp.folder}"/>
@@ -295,6 +325,7 @@
 	</target>
 
 	<target name="refresh" depends="init" if="eclipse.running">
+		<eclipse.refreshLocal resource="${plugindir}" depth="infinite"/>
 		<eclipse.refreshLocal resource="${fragment}" depth="infinite"/>
 	</target>
 
