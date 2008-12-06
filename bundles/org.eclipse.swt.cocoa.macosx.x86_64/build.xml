@@ -58,68 +58,68 @@
 		<delete dir="${temp.folder}/@dot.bin"/>
 		<mkdir dir="${temp.folder}/@dot.bin"/>
 		<javac destdir="${temp.folder}/@dot.bin" verbose="${javacVerbose}" debug="${debug}" failonerror="no" classpath="${plugindir}/extra_jars/exceptions.jar" bootclasspath="${bundleBootClasspath}" source="${bundleJavacSource}" target="${bundleJavacTarget}">
-			<src path="${plugindir}/Eclipse SWT/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT/common/"/>
-			<src path="${plugindir}/Eclipse SWT/common_j2se/"/>
-			<src path="${plugindir}/Eclipse SWT/emulated/bidi/"/>
-			<src path="${plugindir}/Eclipse SWT/emulated/coolbar/"/>
-			<src path="${plugindir}/Eclipse SWT/emulated/expand/"/>
-			<src path="${plugindir}/Eclipse SWT/emulated/tooltip/"/>
-			<src path="${plugindir}/Eclipse SWT Accessibility/common/"/>
-			<src path="${plugindir}/Eclipse SWT Accessibility/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT AWT/common/"/>
-			<src path="${plugindir}/Eclipse SWT AWT/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT Browser/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT Browser/common/"/>
-			<src path="${plugindir}/Eclipse SWT Mozilla/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT Mozilla/common/"/>
-			<src path="${plugindir}/Eclipse SWT Custom Widgets/common/"/>
-			<src path="${plugindir}/Eclipse SWT Drag and Drop/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT Drag and Drop/common/"/>
-			<src path="${plugindir}/Eclipse SWT OpenGL/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT OpenGL/common/"/>
-			<src path="${plugindir}/Eclipse SWT PI/common/"/>
-			<src path="${plugindir}/Eclipse SWT PI/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT PI/common_j2se/"/>
-			<src path="${plugindir}/Eclipse SWT Printing/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT Printing/common/"/>
-			<src path="${plugindir}/Eclipse SWT Program/cocoa/"/>
-			<src path="${plugindir}/Eclipse SWT Program/common/"/>
-			<src path="${plugindir}/Eclipse SWT Theme/emulated/"/>
+			<src path="${basedir}/src/Eclipse SWT/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT/common/"/>
+			<src path="${basedir}/src/Eclipse SWT/common_j2se/"/>
+			<src path="${basedir}/src/Eclipse SWT/emulated/bidi/"/>
+			<src path="${basedir}/src/Eclipse SWT/emulated/coolbar/"/>
+			<src path="${basedir}/src/Eclipse SWT/emulated/expand/"/>
+			<src path="${basedir}/src/Eclipse SWT/emulated/tooltip/"/>
+			<src path="${basedir}/src/Eclipse SWT Accessibility/common/"/>
+			<src path="${basedir}/src/Eclipse SWT Accessibility/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT AWT/common/"/>
+			<src path="${basedir}/src/Eclipse SWT AWT/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT Browser/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT Browser/common/"/>
+			<src path="${basedir}/src/Eclipse SWT Mozilla/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT Mozilla/common/"/>
+			<src path="${basedir}/src/Eclipse SWT Custom Widgets/common/"/>
+			<src path="${basedir}/src/Eclipse SWT Drag and Drop/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT Drag and Drop/common/"/>
+			<src path="${basedir}/src/Eclipse SWT OpenGL/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT OpenGL/common/"/>
+			<src path="${basedir}/src/Eclipse SWT PI/common/"/>
+			<src path="${basedir}/src/Eclipse SWT PI/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT PI/common_j2se/"/>
+			<src path="${basedir}/src/Eclipse SWT Printing/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT Printing/common/"/>
+			<src path="${basedir}/src/Eclipse SWT Program/cocoa/"/>
+			<src path="${basedir}/src/Eclipse SWT Program/common/"/>
+			<src path="${basedir}/src/Eclipse SWT Theme/emulated/"/>
 			<compilerarg line="-log '${temp.folder}'/@dot.bin${logExtension}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 			<compilerarg line="${compilerArg}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 		</javac>
         <property name="includes" value=""/>
         <property name="excludes" value="**/*.java,**/library/,**/package.htm*,**/*._properties,**/*.extras,**/*.idl"/>
 		<copy todir="${temp.folder}/@dot.bin">
-			<fileset dir="${plugindir}/Eclipse SWT/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/expand/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Browser/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/cocoa/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
-			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common_j2se/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/bidi/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/coolbar/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/expand/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/tooltip/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Accessibility/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Accessibility/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT AWT/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT AWT/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Browser/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common_j2se/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Printing/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Printing/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Program/cocoa/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${basedir}/src/Eclipse SWT Theme/emulated/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/components/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
 		<antcall target="copy.translationfiles"/>
@@ -149,99 +149,87 @@
 			<copy todir="${basedir}/src">
 				<fileset dir="${plugindir}" includes="Eclipse*/**"/>
 			</copy>
+			
+			<echo>Convert ints to longs</echo>
 			<!-- Convert SWT 32 bit java source to 64 bit  -->
 			<replace dir="${basedir}/src" includes="**/*.java" token="int /*long*/" value="long /*int*/"/>
-	</target>
-	
-	<target name="replace.32.to.64" depends="init">
-			<echo>Converting java files to 64 bit in org.eclipse.swt project</echo>
-			<!-- Convert SWT 32 bit java source to 64 bit  -->
-			<replace dir="${plugindir}" includes="**/*.java" token="int /*long*/" value="long /*int*/"/>
-			<antcall target="refresh"/>
-	</target>
-
-	<target name="replace.64.to.32" depends="init">
-			<echo>Converting java files to 32 bit in org.eclipse.swt project</echo>
-			<!-- Convert SWT 64 bit java source to 32 bit  -->
-			<replace dir="${plugindir}" includes="**/*.java" token="long /*int*/" value="int /*long*/"/>
-			<antcall target="refresh"/>
 	</target>
 
 	<target name="src.zip" depends="init" unless="src.zip">
 		<mkdir dir="${build.result.folder}/"/>
 		<zip zipfile="${build.result.folder}/src.zip">
-			<fileset dir="${plugindir}/Eclipse SWT/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/expand/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Browser/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cocoa/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common/library/"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/bidi/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/coolbar/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/expand/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/tooltip/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Accessibility/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT AWT/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Browser/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common/library/"/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/cocoa/library/"/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Printing/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Program/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Theme/emulated/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
 			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>
 		</zip>
 	</target>
 
 	<target name="copy.src" depends="init">
 		<copy todir="${destination.temp.folder}/" failonerror="true" overwrite="true">
-			<fileset dir="${plugindir}/Eclipse SWT/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/bidi/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/coolbar/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/expand/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/emulated/tooltip/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Accessibility/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT AWT/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Browser/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/cocoa/library/"/>
-			<fileset dir="${plugindir}/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/cocoa/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="**/*.java" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
-			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common/library/"/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common_j2se/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/bidi/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/coolbar/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/expand/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/emulated/tooltip/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Accessibility/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Accessibility/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT AWT/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT AWT/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Browser/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Browser/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Mozilla/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Custom Widgets/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Drag and Drop/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT OpenGL/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common/library/"/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/cocoa/library/"/>
+			<fileset dir="${basedir}/src/Eclipse SWT PI/common_j2se/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Printing/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Printing/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Program/cocoa/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Program/common/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT Theme/emulated/" includes="**/*.java" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common_j2se/" includes="**/*.properties" excludes=""/>
+			<fileset dir="${basedir}/src/Eclipse SWT/common/" includes="**/version.txt" excludes=""/>
 			<fileset dir="${basedir}" includes="about.html,about_files/" excludes=""/>
 		</copy>
 	</target>
