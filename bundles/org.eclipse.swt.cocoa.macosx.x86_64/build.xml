@@ -150,9 +150,27 @@
 				<fileset dir="${plugindir}" includes="Eclipse*/**"/>
 			</copy>
 			
-			<echo>Convert ints to longs</echo>
-			<!-- Convert SWT 32 bit java source to 64 bit  -->
-			<replace dir="${basedir}/src" includes="**/*.java" token="int /*long*/" value="long /*int*/"/>
+			<antcall target="replace.32.to.64"/>
+	</target>
+	
+	<!-- Convert SWT 32 bit java and C source to 64 bit  -->
+	<target name="replace.32.to.64" depends="init">
+		<echo>Converting java files to 64 bit in org.eclipse.swt project</echo>
+		<replace dir="${basedir}/src" includes="**/*.java" token="int /*long*/" value="long /*int*/"/>
+		<replace dir="${basedir}/src" includes="**/*.java" token="int[] /*long[]*/" value="long[] /*int[]*/"/>
+		<replace dir="${basedir}/src" includes="**/*.java" token="float /*double*/" value="double /*float*/"/>
+		<replace dir="${basedir}/src" includes="**/*.java" token="float[] /*double[]*/" value="double[] /*float[]*/"/>
+		<antcall target="init"/>
+	</target>
+		
+	<!-- Convert SWT 64 bit java and C source to 32 bit  -->
+	<target name="replace.64.to.32" depends="init">
+		<echo>Converting java files to 32 bit in org.eclipse.swt project</echo>
+		<replace dir="${basedir}/src" includes="**/*.java" token="long /*int*/" value="int /*long*/"/>
+		<replace dir="${basedir}/src" includes="**/*.java" token="long[] /*int[]*/" value="int[] /*long[]*/"/>
+		<replace dir="${basedir}/src" includes="**/*.java" token="double /*float*/" value="float /*double*/"/>
+		<replace dir="${basedir}/src" includes="**/*.java" token="double[] /*float[]*/" value="float[] /*double[]*/"/>
+		<antcall target="init"/>
 	</target>
 
 	<target name="src.zip" depends="init" unless="src.zip">
