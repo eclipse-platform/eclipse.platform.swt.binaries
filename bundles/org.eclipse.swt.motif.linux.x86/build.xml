@@ -100,7 +100,7 @@
 			<compilerarg line="${compilerArg}" compiler="org.eclipse.jdt.core.JDTCompilerAdapter"/> 
 		</javac>
         <property name="includes" value=""/>
-        <property name="excludes" value="**/*.java,**/library/,**/package.htm*,**/*._properties"/>
+        <property name="excludes" value="**/*.java,**/library/,**/package.htm*,**/*._properties,**/*.idl"/>
 		<copy todir="${temp.folder}/@dot.bin">
 			<fileset dir="${plugindir}/Eclipse SWT/cairo/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT/common/" includes="${includes}" excludes="${excludes}"/>
@@ -140,6 +140,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/motif/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Theme/emulated/" includes="${includes}" excludes="${excludes}"/>
+			<fileset dir="${plugindir}/components/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
 		<antcall target="copy.translationfiles"/>
 
