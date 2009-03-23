@@ -297,6 +297,13 @@
 		<copy file="${temp.folder}/@dot.bin${logExtension}" todir="${destination.temp.folder}/${full.name}/"/>
 	</target>
 
+	<target name="publish.bin.parts" depends="init" if="p2.publish.parts">
+			<antcall target="gather.bin.parts">
+				<param name="destination.temp.folder" value="${build.result.folder}" />
+			</antcall>
+			<eclipse.gatherBundle metadataRepository="${p2.build.repo}" artifactRepository="${p2.build.repo}" buildResultFolder="${build.result.folder}" targetFolder="${build.result.folder}/${full.name}" />
+		</target>
+	
 	<target name="gather.bin.parts" depends="init" if="destination.temp.folder">
 		<mkdir dir="${destination.temp.folder}/${full.name}"/>
 		<copy todir="${destination.temp.folder}/${full.name}" failonerror="true">
