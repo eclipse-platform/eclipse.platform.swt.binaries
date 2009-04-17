@@ -6,7 +6,7 @@
 #   libswt-xulrunner-gtk-XXXX.so
 # Use this file (gtk.linux.x86_rhel3.csh) to compile and release the remaining libraries
 
-echo Building LINUX X86 GTK on RHEL3
+echo Building Solaris X86 GTK
 echo mod
 
 # These variables must be set to reflect the compilation context
