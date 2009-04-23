@@ -5,7 +5,8 @@
 echo Building Solaris x86 GTK
 
 # These variables must be set to reflect the compilation context
-setenv CXX g++
+setenv CC cc
+setenv CXX CC
 
 setenv JAVA_HOME /bluebird/teamswt/swt-builddir/IBMJava2-141
 setenv MOZILLA_SDK /bluebird/teamswt/bog/mozilla/solaris_x86/1.7/mozilla/dist/sdk
