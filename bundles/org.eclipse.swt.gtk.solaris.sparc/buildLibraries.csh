@@ -1,7 +1,7 @@
 echo Building SOLARIS SPARC GTK
 
 # These variables must be set to reflect the compilation context
-setenv CAIROPATH /usr/local/cairo-1.4.6/lib/pkgconfig/
+setenv CAIROPATH /usr/local/cairo-1.4.10/lib/pkgconfig/
 setenv CCPATH /export/home/SUNWspro/bin
 
 setenv CC cc
