@@ -3,7 +3,7 @@ Fragment-Host: org.eclipse.swt; bundle-version="[3.0.0,4.0.0)"
 Bundle-Name: %fragmentName
 Bundle-Vendor: %providerName
 Bundle-SymbolicName: org.eclipse.swt.gtk.linux.x86; singleton:=true
-Bundle-Version: 3.5.0.qualifier
+Bundle-Version: 3.2.0.qualifier
 Bundle-ManifestVersion: 2
 Bundle-Localization: fragment
 Export-Package: 
@@ -15,5 +15,3 @@ Export-Package:
  org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=linux) (osgi.arch=x86))
-Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
- J2SE-1.3
