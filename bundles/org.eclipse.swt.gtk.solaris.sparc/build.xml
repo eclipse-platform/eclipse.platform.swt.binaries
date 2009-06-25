@@ -127,6 +127,7 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/gnome/" includes="${includes}" excludes="${excludes}" />
 			<fileset dir="${plugindir}/Eclipse SWT Program/gtk/" includes="${includes}" excludes="${excludes}" />
 			<fileset dir="${plugindir}/Eclipse SWT Theme/gtk/" includes="${includes}" excludes="${excludes}" />
+			<fileset dir="${plugindir}/components/" includes="${includes}" excludes="${excludes}" />
 		</copy>
 		<antcall target="copy.translationfiles" />
 
