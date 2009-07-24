@@ -8,6 +8,10 @@ Bundle-ManifestVersion: 2
 Bundle-Localization: fragment
 Export-Package: 
  org.eclipse.swt.internal.cocoa; x-internal:=true
-Eclipse-PlatformFilter: (& (osgi.ws=cocoa) (osgi.os=macosx) (osgi.arch=x86_64) )
+Bundle-NativeCode: 
+ libswt-awt-cocoa-3604.jnilib;
+ libswt-cocoa-3604.jnilib;
+ libswt-pi-cocoa-3604.jnilib;
+   selection-filter="(& (osgi.ws=cocoa) (osgi.os=macosx) (osgi.arch=x86_64) )"
 Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
  J2SE-1.3

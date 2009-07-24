@@ -8,6 +8,9 @@ Bundle-ManifestVersion: 2
 Bundle-Localization: fragment
 Export-Package: 
  org.eclipse.swt.internal.wpf; x-internal:=true
-Eclipse-PlatformFilter: (& (osgi.ws=wpf) (osgi.os=win32) (osgi.arch=x86))
+Bundle-NativeCode: 
+ swt-win32-wpf-3604.dll;
+ swt-wpf-3604.dll;
+  selection-filter="(& (osgi.ws=wpf) (osgi.os=win32) (osgi.arch=x86))"
 Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
  J2SE-1.3
