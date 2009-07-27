@@ -14,19 +14,6 @@ Export-Package:
  org.eclipse.swt.internal.gtk; x-internal:=true,
  org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
-Bundle-NativeCode: 
- libcairo-swt.so;
- libswt-atk-gtk-3604.so;
- libswt-awt-gtk-3604.so;
- libswt-cairo-gtk-3604.so;
- libswt-glx-gtk-3604.so;
- libswt-gnome-gtk-3604.so;
- libswt-gtk-3604.so;
- libswt-mozilla-gcc3-gtk-3604.so;
- libswt-mozilla-gtk-3604.so;
- libswt-pi-gtk-3604.so;
- libswt-xpcominit-gtk-3604.so;
- libswt-xulrunner-gtk-3604.so;
-  selection-filter="(& (osgi.ws=gtk) (osgi.os=linux) (osgi.arch=x86))"
+Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=linux) (osgi.arch=x86))
 Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
  J2SE-1.3

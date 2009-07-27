@@ -14,12 +14,6 @@ Export-Package:
  org.eclipse.swt.internal.motif; x-internal:=true,
  org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
-Bundle-NativeCode: 
- libswt-awt-motif-3604.so;
- libswt-cairo-motif-3604.so;
- libswt-cde-motif-3604.so;
- libswt-glx-motif-3604.so;
- libswt-motif-3604.so;
-  selection-filter="(& (osgi.ws=motif) (osgi.os=solaris) (osgi.arch=sparc))"
+Eclipse-PlatformFilter: (& (osgi.ws=motif) (osgi.os=solaris) (osgi.arch=sparc))
 Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
  J2SE-1.3

@@ -10,12 +10,6 @@ Export-Package:
  org.eclipse.swt.internal.carbon; x-internal:=true,
  org.eclipse.swt.internal.cocoa; x-internal:=true,
  org.eclipse.swt.internal.opengl.carbon; x-internal:=true
-Bundle-NativeCode: 
- libswt-agl-carbon-3604.jnilib;
- libswt-carbon-3604.jnilib;
- libswt-cocoa-carbon-3604.jnilib;
- libswt-pi-carbon-3604.jnilib;
- libswt-xulrunner-carbon-3604.jnilib;
-   selection-filter="(& (osgi.ws=carbon) (osgi.os=macosx) (|(osgi.arch=x86)(osgi.arch=ppc)) )"
+Eclipse-PlatformFilter: (& (osgi.ws=carbon) (osgi.os=macosx) (|(osgi.arch=x86)(osgi.arch=ppc)) )
 Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
  J2SE-1.3

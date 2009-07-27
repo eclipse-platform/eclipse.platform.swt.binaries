@@ -14,18 +14,6 @@ Export-Package:
  org.eclipse.swt.internal.motif; x-internal:=true,
  org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
-Bundle-NativeCode: 
- libcairo-swt.so;
- libswt-awt-motif-3604.so;
- libswt-cairo-motif-3604.so;
- libswt-glx-motif-3604.so;
- libswt-gnome-motif-3604.so;
- libswt-gtk-motif-3604.so;
- libswt-motif-3604.so;
- libswt-mozilla-gcc3-motif-3604.so;
- libswt-mozilla-motif-3604.so;
- libswt-xpcominit-motif-3604.so;
- libswt-xulrunner-motif-3604.so;
-  selection-filter="(& (osgi.ws=motif) (osgi.os=linux) (osgi.arch=x86))"
+Eclipse-PlatformFilter: (& (osgi.ws=motif) (osgi.os=linux) (osgi.arch=x86))
 Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
  J2SE-1.3
