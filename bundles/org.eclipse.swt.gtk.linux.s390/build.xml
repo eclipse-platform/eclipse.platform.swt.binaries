@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="org.eclipse.swt.gtk.linux.s390" default="build.jars" basedir=".">
 
-	<property name="ws" value="gtk" />
-	<property name="os" value="linux" />
-	<property name="os" value="s390" />
+	<property name="swt.ws" value="gtk" />
+	<property name="swt.os" value="linux" />
+	<property name="swt.os" value="s390" />
 	
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
 	<property name="version.suffix" value="3.6.0" />
-	<property name="fragment" value="org.eclipse.swt.gtk.linux.s390" />
 	
 	<import file="../org.eclipse.swt/buildFragment.xml"/>
 </project>

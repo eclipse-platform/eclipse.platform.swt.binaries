@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="org.eclipse.swt.cocoa.macosx" default="build.jars" basedir=".">
 
-	<property name="ws" value="cocoa" />
-	<property name="os" value="macosx" />
+	<property name="swt.ws" value="cocoa" />
+	<property name="swt.os" value="macosx" />
 	
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
 	<property name="version.suffix" value="3.6.0" />
-	<property name="fragment" value="org.eclipse.swt.cocoa.macosx" />
 	
 	<import file="../org.eclipse.swt/buildFragment.xml"/>
 </project>
