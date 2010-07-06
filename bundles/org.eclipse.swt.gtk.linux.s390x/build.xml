@@ -6,7 +6,7 @@
 	<property name="swt.arch" value="s390x" />
 	
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
-	<property name="version.suffix" value="3.6.0" />
+	<property name="version.suffix" value="3.6.1" />
 	
 	<import file="../org.eclipse.swt/buildFragment.xml"/>
 </project>
