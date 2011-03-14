@@ -6,7 +6,7 @@
 	<property name="swt.arch" value="ppc64" />
 	
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
-	<property name="version.suffix" value="3.6.2" />
+	<property name="version.suffix" value="3.6.3" />
 	
 	<import file="../org.eclipse.swt/buildFragment.xml"/>
 </project>
