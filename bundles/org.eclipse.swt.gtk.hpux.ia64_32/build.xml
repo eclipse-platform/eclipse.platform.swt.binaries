@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="org.eclipse.swt.gtk.hpux.ia64_32" default="build.jars" basedir=".">
+<project name="org.eclipse.swt.gtk.hpux.ia64_32" default="build.jars" basedir="../../..">
 
 	<property name="swt.ws" value="gtk" />
 	<property name="swt.os" value="hpux" />
@@ -8,5 +8,6 @@
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
 	<property name="version.suffix" value="3.8.0" />
 
-	<import file="../org.eclipse.swt/buildFragment.xml"/>
+	<import file="../../../eclipse.platform.swt/bundles/org.eclipse.swt/buildFragment.xml"/>
+	<import file="../../../eclipse.platform.swt/bundles/org.eclipse.swt/buildNatives.xml"/>
 </project>
