@@ -8,5 +8,5 @@
 	<property name="version.suffix" value="3.8.0" />
 	
 	<import file="../../../eclipse.platform.swt/bundles/org.eclipse.swt/buildFragment.xml"/>
-	<import file="../../../eclipse.platform.swt/bundles/org.eclipse.swt/buildNatives.xml"/>
+	<import file="../../../eclipse.platform.swt/bundles/org.eclipse.swt/buildSWT.xml"/>
 </project>
