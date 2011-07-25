@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="org.eclipse.swt.win32.win32.x86_64" default="build.jars" basedir="../../..">
+<project name="org.eclipse.swt.win32.win32.x86_64" default="build.jars" basedir=".">
 
 	<property name="swt.ws" value="win32" />
 	<property name="swt.os" value="win32" />
@@ -9,6 +9,9 @@
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
 	<property name="version.suffix" value="3.8.0" />
 	
-	<import file="../../../eclipse.platform.swt/bundles/org.eclipse.swt/buildFragment.xml"/>
-	<import file="../../../eclipse.platform.swt/bundles/org.eclipse.swt/buildSWT.xml"/>
+	<condition property="pluginroot" value="../../../eclipse.platform.swt/bundles" else="${buildDirectory}/plugins">
+		<available file="../../../eclipse.platform.swt/bundles" type="dir"/>
+	</condition>
+	<import file="${pluginroot}/org.eclipse.swt/buildFragment.xml"/>
+	<import file="${pluginroot}/org.eclipse.swt/buildSWT.xml"/>
 </project>
