@@ -28,7 +28,6 @@
 		<property name="temp.folder" value="${basedir}/temp.folder"/>
 		<property name="build.result.folder" value="${basedir}"/>
 		<property name="destination" value="${basedir}"/>
-		<property name="plugindir" value="../org.eclipse.swt"/>
 		<property name="bootclasspath" value=""/>
 		<property name="javacVerbose" value="true"/>
 		<property name="compilerArg" value=""/>
