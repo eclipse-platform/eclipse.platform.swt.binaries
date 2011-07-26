@@ -9,9 +9,9 @@
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
 	<property name="version.suffix" value="3.7.0" />
 
-	<condition property="pluginroot" value="../../../eclipse.platform.swt/bundles" else="${buildDirectory}/plugins">
-		<available file="../../../eclipse.platform.swt/bundles" type="dir"/>
+	<condition property="plugindir" value="../../../eclipse.platform.swt/bundles/org.eclipse.swt" else="${buildDirectory}/plugins/org.eclipse.swt">
+		<available file="../../../eclipse.platform.swt/bundles/org.eclipse.swt" type="dir"/>
 	</condition>
-	<import file="${pluginroot}/org.eclipse.swt/buildFragment.xml"/>
-	<import file="${pluginroot}/org.eclipse.swt/buildSWT.xml"/>
+	<import file="${plugindir}/buildFragment.xml"/>
+	<import file="${plugindir}/buildSWT.xml"/>
 </project>
