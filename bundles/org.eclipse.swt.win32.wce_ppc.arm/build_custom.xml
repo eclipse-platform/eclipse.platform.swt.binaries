@@ -77,7 +77,13 @@
 		
 		<!-- Create resulting jar file into result folder -->
 		<mkdir dir="${build.result.folder}/ws/win32/"/>
-		<jar jarfile="${build.result.folder}/ws/win32/swt.jar" basedir="${temp.folder}/ws/win32/swt.jar.bin" excludes="**/*.java"/>
+		<jar jarfile="${build.result.folder}/ws/win32/swt.jar" basedir="${temp.folder}/ws/win32/swt.jar.bin" excludes="**/*.java">
+			<manifest>
+				<attribute name="SWT-OS" value="${swt.os}"/>
+				<attribute name="SWT-WS" value="${swt.ws}"/>
+				<attribute name="SWT-Arch" value="${swt.arch}"/>
+			</manifest>
+		</jar>
 		
 		<delete dir="${temp.folder}"/>
 	</target>
