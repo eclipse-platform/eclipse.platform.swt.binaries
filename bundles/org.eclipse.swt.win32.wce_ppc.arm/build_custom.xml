@@ -79,9 +79,9 @@
 		<mkdir dir="${build.result.folder}/ws/win32/"/>
 		<jar jarfile="${build.result.folder}/ws/win32/swt.jar" basedir="${temp.folder}/ws/win32/swt.jar.bin" excludes="**/*.java">
 			<manifest>
-				<attribute name="SWT-OS" value="${swt.os}"/>
-				<attribute name="SWT-WS" value="${swt.ws}"/>
-				<attribute name="SWT-Arch" value="${swt.arch}"/>
+				<attribute name="SWT-OS" value="wce_ppc"/>
+				<attribute name="SWT-WS" value="win32"/>
+				<attribute name="SWT-Arch" value="arm"/>
 			</manifest>
 		</jar>
 		
