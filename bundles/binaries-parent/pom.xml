@@ -18,7 +18,7 @@
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>target-platform-configuration</artifactId>
-        <version>0.14.1</version>
+        <version>${tycho.version}</version>
         <configuration>
           <environments>
             <environment>
@@ -47,6 +47,9 @@
                 </copy>
                 <copy toDir="src/org/">
                   <fileset dir="temp.folder/@dot.src/org/" />
+                </copy>
+                <copy toDir="target/classes/org/">
+                  <fileset dir="@dot/org/" />
                 </copy>
               </target>
             </configuration>
