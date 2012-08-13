@@ -37,4 +37,32 @@
     <module>bundles/org.eclipse.swt.cocoa.macosx.x86_64</module>
     <module>bundles/org.eclipse.swt.win32.wce_ppc.arm</module>
   </modules>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <configuration>
+          <!--
+            minimal declared bree is CDC-1.0/Foundation-1.0
+            all/most swt fragments require awt during build so one of j2se is required
+            theoretically we should be using J2SE-1.3, but I am too lazy to locate
+            and install it for my linux/x64 system.
+          -->
+          <executionEnvironment>J2SE-1.4</executionEnvironment>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>tycho-compiler-plugin</artifactId>
+        <configuration>
+          <!-- setup compiler source/target to match CDC-1.0/Foundation-1.0 -->
+          <source>1.3</source>
+          <target>1.1</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
 </project>
