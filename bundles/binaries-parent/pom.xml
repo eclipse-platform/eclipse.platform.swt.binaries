@@ -1,0 +1,61 @@
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>eclipse.platform.swt.binaries</artifactId>
+    <groupId>eclipse.platform.swt.binaries</groupId>
+    <version>3.8.0-SNAPSHOT</version>
+    <relativePath>../../</relativePath>
+  </parent>
+  <groupId>eclipse.platform.swt.binaries</groupId>
+  <artifactId>binaries-parent</artifactId>
+  <version>3.8.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.eclipse.tycho</groupId>
+        <artifactId>target-platform-configuration</artifactId>
+        <version>0.14.1</version>
+        <configuration>
+          <environments>
+            <environment>
+              <os>${os}</os>
+              <ws>${ws}</ws>
+              <arch>${arch}</arch>
+            </environment>
+          </environments>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.7</version>
+        <executions>
+          <execution>
+            <id>normal</id>
+            <phase>compile</phase>
+            <configuration>
+              <target>
+                <property name="build.compiler" value="extJavac" />
+                <delete dir="org" failonerror="false" />
+                <delete dir="src" failonerror="false" />
+                <ant antfile="build.xml" target="build.jars" />
+                <copy toDir=".">
+                  <fileset dir="@dot/" />
+                </copy>
+                <copy toDir="src/org/">
+                  <fileset dir="temp.folder/@dot.src/org/" />
+                </copy>
+              </target>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
