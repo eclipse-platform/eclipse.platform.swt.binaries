@@ -171,6 +171,15 @@
 			<fileset dir="${plugindir}/Eclipse SWT Program/win32/" includes="${includes}" excludes="${excludes}"/>
 			<fileset dir="${plugindir}/Eclipse SWT Program/common/" includes="${includes}" excludes="${excludes}"/>
 		</copy>
+		<antcall target="replace64"/>
+	</target>
+	
+	<target name="replace64">
+		<echo>Converting java files to 32 bit</echo>
+		<replace dir="${destdir}" includes="**/*.java" value="int /*long*/" token="long /*int*/"/>
+		<replace dir="${destdir}" includes="**/*.java" value="int[] /*long[]*/" token="long[] /*int[]*/"/>
+		<replace dir="${destdir}" includes="**/*.java" value="float /*double*/" token="double /*float*/"/>
+		<replace dir="${destdir}" includes="**/*.java" value="float[] /*double[]*/" token="double[] /*float[]*/"/>
 	</target>
 
 	<target name="build.sources" depends="init">
