@@ -11,14 +11,12 @@
 #     Krzysztof Daniel, Red Hat, Inc and others. - initial API and implementation
 ###############################################################################
 -->
-<project
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>binaries-parent</artifactId>
     <groupId>eclipse.platform.swt.binaries</groupId>
-    <version>4.2.0-SNAPSHOT</version>
+    <version>4.3.0-SNAPSHOT</version>
     <relativePath>../binaries-parent/</relativePath>
   </parent>
   <groupId>org.eclipse.swt</groupId>
@@ -44,7 +42,7 @@
             <phase>package</phase>
             <configuration>
               <target>
-                <ant antfile="build.xml" target="swtdownload" />
+                <ant antfile="build.xml" target="swtdownload"/>
               </target>
             </configuration>
             <goals>
@@ -59,7 +57,7 @@
             </goals>
             <configuration>
               <target>
-                <move file="swt-${buildId}-${ws}-${os}.zip" todir="target" />
+                <move file="swt-${buildId}-${ws}-${os}.zip" todir="target"/>
               </target>
             </configuration>
           </execution>
@@ -119,7 +117,7 @@
                 <phase>process-resources</phase>
                 <configuration>
                   <target>
-                    <ant antfile="build.xml" target="build_libraries" />
+                    <ant antfile="build.xml" target="build_libraries"/>
                   </target>
                 </configuration>
                 <goals>
