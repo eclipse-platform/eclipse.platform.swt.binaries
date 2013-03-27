@@ -11,19 +11,17 @@
 #     Krzysztof Daniel, Red Hat, Inc. - initial API and implementation
 ###############################################################################
 -->
-<project
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>eclipse.platform.swt.binaries</artifactId>
     <groupId>eclipse.platform.swt.binaries</groupId>
-    <version>4.2.0-SNAPSHOT</version>
+    <version>4.2.2-SNAPSHOT</version>
     <relativePath>../../</relativePath>
   </parent>
   <groupId>eclipse.platform.swt.binaries</groupId>
   <artifactId>binaries-parent</artifactId>
-  <version>4.2.0-SNAPSHOT</version>
+  <version>4.2.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <build>
@@ -51,18 +49,18 @@
             <phase>compile</phase>
             <configuration>
               <target>
-                <property name="build.compiler" value="extJavac" />
-                <delete dir="org" failonerror="false" />
-                <delete dir="src" failonerror="false" />
-                <ant antfile="build.xml" target="build.jars" />
+                <property name="build.compiler" value="extJavac"/>
+                <delete dir="org" failonerror="false"/>
+                <delete dir="src" failonerror="false"/>
+                <ant antfile="build.xml" target="build.jars"/>
                 <copy toDir=".">
-                  <fileset dir="@dot/" />
+                  <fileset dir="@dot/"/>
                 </copy>
                 <copy toDir="src/org/">
-                  <fileset dir="temp.folder/@dot.src/org/" />
+                  <fileset dir="temp.folder/@dot.src/org/"/>
                 </copy>
                 <copy toDir="target/classes/org/">
-                  <fileset dir="@dot/org/" />
+                  <fileset dir="@dot/org/"/>
                 </copy>
               </target>
             </configuration>
