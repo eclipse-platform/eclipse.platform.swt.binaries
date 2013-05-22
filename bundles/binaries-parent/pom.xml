@@ -56,8 +56,11 @@
                 <copy toDir=".">
                   <fileset dir="@dot/"/>
                 </copy>
-                <copy toDir="src/org/">
-                  <fileset dir="temp.folder/@dot.src/org/"/>
+                <copy toDir="src/">
+                  <fileset dir="temp.folder/@dot.src" includes="**/*.java"/>
+                  <fileset dir="temp.folder/@dot.src" includes="**/*.properties"/>
+                  <fileset dir="temp.folder/@dot.src" includes="**/version.txt"/>
+                  <fileset dir="temp.folder/@dot.src/library/"/>
                 </copy>
                 <copy toDir="target/classes/org/">
                   <fileset dir="@dot/org/"/>
