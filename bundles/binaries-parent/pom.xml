@@ -46,25 +46,11 @@
         <executions>
           <execution>
             <id>normal</id>
-            <phase>compile</phase>
+            <phase>initialize</phase>
             <configuration>
               <target>
-                <property name="build.compiler" value="extJavac"/>
-                <delete dir="org" failonerror="false"/>
-                <delete dir="src" failonerror="false"/>
-                <ant antfile="build.xml" target="build.jars"/>
-                <copy toDir=".">
-                  <fileset dir="@dot/"/>
-                </copy>
-                <copy toDir="src/">
-                  <fileset dir="temp.folder/@dot.src" includes="**/*.java"/>
-                  <fileset dir="temp.folder/@dot.src" includes="**/*.properties"/>
-                  <fileset dir="temp.folder/@dot.src" includes="**/version.txt"/>
-                  <fileset dir="temp.folder/@dot.src/library/"/>
-                </copy>
-                <copy toDir="target/classes/org/">
-                  <fileset dir="@dot/org/"/>
-                </copy>
+		<property name="copy.src.dir" value="src"/>
+		<ant antfile="build.xml" target="copy.${ws}.src"/>
               </target>
             </configuration>
             <goals>
