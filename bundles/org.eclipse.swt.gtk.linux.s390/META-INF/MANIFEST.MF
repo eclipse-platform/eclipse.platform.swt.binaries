@@ -32,6 +32,6 @@ Export-Package:
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=linux) (osgi.arch=s390))
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-SWT-OS: gtk
-SWT-WS: linux
+SWT-WS: gtk
+SWT-OS: linux
 SWT-Arch: s390
