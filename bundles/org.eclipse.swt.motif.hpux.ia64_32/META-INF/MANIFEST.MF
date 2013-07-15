@@ -31,3 +31,6 @@ Export-Package:
  org.eclipse.swt.internal.mozilla; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=motif) (osgi.os=hpux) (osgi.arch=ia64_32))
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+SWT-WS: motif
+SWT-OS: hpux
+SWT-Arch: ia64_32

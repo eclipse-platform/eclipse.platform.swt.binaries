@@ -26,4 +26,6 @@ Export-Package:
  org.eclipse.swt.internal.win32; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=win32) (osgi.os=wce_ppc) (osgi.arch=arm))
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-
+SWT-WS: win32
+SWT-OS: wce_ppc
+SWT-Arch: arm

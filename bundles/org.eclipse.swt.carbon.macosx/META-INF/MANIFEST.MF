@@ -28,3 +28,5 @@ Export-Package:
  org.eclipse.swt.internal.opengl.carbon; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=carbon) (osgi.os=macosx) (|(osgi.arch=x86)(osgi.arch=ppc)) )
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+SWT-WS: carbon
+SWT-OS: macosx

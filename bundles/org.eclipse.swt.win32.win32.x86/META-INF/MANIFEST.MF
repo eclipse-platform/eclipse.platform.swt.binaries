@@ -30,3 +30,6 @@ Export-Package:
  org.eclipse.swt.internal.opengl.win32; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=win32) (osgi.os=win32) (osgi.arch=x86))
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+SWT-WS: win32
+SWT-OS: win32
+SWT-Arch: x86

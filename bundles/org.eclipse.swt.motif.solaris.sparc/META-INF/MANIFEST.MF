@@ -32,3 +32,6 @@ Export-Package:
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=motif) (osgi.os=solaris) (osgi.arch=sparc))
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+SWT-WS: motif
+SWT-OS: solaris
+SWT-Arch: sparc

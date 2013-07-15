@@ -32,3 +32,6 @@ Export-Package:
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=solaris) (osgi.arch=x86))
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+SWT-WS: gtk
+SWT-OS: solaris
+SWT-Arch: x86

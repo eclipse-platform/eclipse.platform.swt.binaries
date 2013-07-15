@@ -26,3 +26,6 @@ Export-Package:
  org.eclipse.swt.internal.wpf; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=wpf) (osgi.os=win32) (osgi.arch=x86))
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
+SWT-WS: wpf
+SWT-OS: win32
+SWT-Arch: x86
