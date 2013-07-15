@@ -31,5 +31,4 @@ Export-Package:
  org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=linux) (osgi.arch=s390x))
-Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
- J2SE-1.3
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
