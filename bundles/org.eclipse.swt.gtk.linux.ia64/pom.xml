@@ -29,17 +29,7 @@
     <ws>gtk</ws>
     <arch>ia64</arch>
     <buildid>${buildId}</buildid>
-
   </properties>
-
-  <!--dependencies>
-    <dependency>
-      <groupId>eclipse.platform.swt.binaries</groupId>
-      <artifactId>binaries-parent</artifactId>
-      <version>1.0</version>
-      <type>pom</type>
-    </dependency>
-  </dependencies-->
 
   <build>
     <plugins>
@@ -95,11 +85,6 @@
             <artifactId>ant-apache-bsf</artifactId>
             <version>1.8.3</version>
           </dependency>
-          <dependency>
-            <groupId>org.apache.ant</groupId>
-            <artifactId>ant-nodeps</artifactId>
-            <version>1.8.1</version>
-          </dependency>
         </dependencies>
       </plugin>
     </plugins>
@@ -150,11 +135,6 @@
                 <groupId>org.apache.ant</groupId>
                 <artifactId>ant-apache-bsf</artifactId>
                 <version>1.8.3</version>
-              </dependency>
-              <dependency>
-                <groupId>org.apache.ant</groupId>
-                <artifactId>ant-nodeps</artifactId>
-                <version>1.8.1</version>
               </dependency>
             </dependencies>
           </plugin>

@@ -86,11 +86,6 @@
             <artifactId>ant-apache-bsf</artifactId>
             <version>1.8.3</version>
           </dependency>
-          <dependency>
-            <groupId>org.apache.ant</groupId>
-            <artifactId>ant-nodeps</artifactId>
-            <version>1.8.1</version>
-          </dependency>
         </dependencies>
       </plugin>
     </plugins>
@@ -142,11 +137,6 @@
                 <groupId>org.apache.ant</groupId>
                 <artifactId>ant-apache-bsf</artifactId>
                 <version>1.8.3</version>
-              </dependency>
-              <dependency>
-                <groupId>org.apache.ant</groupId>
-                <artifactId>ant-nodeps</artifactId>
-                <version>1.8.1</version>
               </dependency>
             </dependencies>
           </plugin>
