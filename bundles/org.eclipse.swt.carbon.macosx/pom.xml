@@ -48,18 +48,6 @@
               <goal>run</goal>
             </goals>
           </execution>
-          <execution>
-            <id>copy-swtzip-to-target</id>
-            <phase>package</phase>
-            <goals>
-              <goal>run</goal>
-            </goals>
-            <configuration>
-              <target>
-                <move file="swt-${buildId}-${ws}-${os}.zip" todir="target"/>
-              </target>
-            </configuration>
-          </execution>
         </executions>
       </plugin>
     </plugins>
