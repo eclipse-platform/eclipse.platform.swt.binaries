@@ -31,8 +31,6 @@ Export-Package:
  org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.internal.opengl.glx; x-internal:=true
 Eclipse-PlatformFilter: (& (osgi.ws=motif) (osgi.os=aix) (osgi.arch=ppc))
-Bundle-RequiredExecutionEnvironment: CDC-1.0/Foundation-1.0,
- J2SE-1.3
 SWT-WS: motif
 SWT-OS: aix
 SWT-Arch: ppc
