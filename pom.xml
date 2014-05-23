@@ -51,8 +51,10 @@
     <module>bundles/org.eclipse.swt.gtk.hpux.ia64_32</module>
     <module>bundles/org.eclipse.swt.gtk.linux.ppc</module>
     <module>bundles/org.eclipse.swt.gtk.linux.ppc64</module>
+    <module>bundles/org.eclipse.swt.gtk.linux.ppc64le</module>
     <module>bundles/org.eclipse.swt.gtk.linux.s390</module>
     <module>bundles/org.eclipse.swt.gtk.linux.s390x</module>
+    <module>bundles/org.eclipse.swt.gtk.linux.ia64</module>
     <module>bundles/org.eclipse.swt.gtk.linux.x86</module>
     <module>bundles/org.eclipse.swt.gtk.linux.x86_64</module>
     <module>bundles/org.eclipse.swt.gtk.solaris.sparc</module>

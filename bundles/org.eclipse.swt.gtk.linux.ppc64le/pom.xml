@@ -20,16 +20,15 @@
     <relativePath>../binaries-parent/</relativePath>
   </parent>
   <groupId>org.eclipse.swt</groupId>
-  <artifactId>org.eclipse.swt.gtk.linux.ia64</artifactId>
+  <artifactId>org.eclipse.swt.gtk.linux.ppc64le</artifactId>
   <version>3.100.2-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 
   <properties>
     <os>linux</os>
     <ws>gtk</ws>
-    <arch>ia64</arch>
+    <arch>ppc64le</arch>
     <buildid>${buildId}</buildid>
-
   </properties>
 
   <!--dependencies>
@@ -113,7 +112,7 @@
         <property>
           <!-- This has to be hardcoded. Profiles are not allowed to use pom defined properties :-( -->
           <name>native</name>
-          <value>gtk.linux.ia64</value>
+          <value>gtk.linux.ppc64le</value>
         </property>
       </activation>
       <build>
