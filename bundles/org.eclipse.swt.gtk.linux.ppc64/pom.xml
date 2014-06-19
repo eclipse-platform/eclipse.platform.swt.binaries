@@ -16,7 +16,7 @@
   <parent>
     <artifactId>binaries-parent</artifactId>
     <groupId>eclipse.platform.swt.binaries</groupId>
-    <version>4.4.0-SNAPSHOT</version>
+    <version>4.5.0-SNAPSHOT</version>
     <relativePath>../binaries-parent/</relativePath>
   </parent>
   <groupId>org.eclipse.swt</groupId>
@@ -74,7 +74,7 @@
                 <phase>process-resources</phase>
                 <configuration>
                   <target>
-                    <property name="machine_gtk3" value="1" />
+                    <property name="machine_gtk3" value="1"/>
                     <ant antfile="build.xml" target="build_libraries"/>
                   </target>
                 </configuration>
