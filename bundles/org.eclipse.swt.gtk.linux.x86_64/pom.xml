@@ -75,6 +75,7 @@
                 <configuration>
                   <target>
                     <property name="machine_gtk3" value="1"/>
+                    <property name="targets" value="install" />
                     <ant antfile="build.xml" target="build_libraries"/>
                   </target>
                 </configuration>
