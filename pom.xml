@@ -44,7 +44,6 @@
   </repositories>
 
   <modules>
-    <module>bundles/org.eclipse.swt.cocoa.macosx</module>
     <module>bundles/org.eclipse.swt.cocoa.macosx.x86_64</module>
     <module>bundles/org.eclipse.swt.gtk.aix.ppc</module>
     <module>bundles/org.eclipse.swt.gtk.aix.ppc64</module>
