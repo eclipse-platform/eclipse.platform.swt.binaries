@@ -22,7 +22,7 @@
   <version>4.5.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
-    <forceContextQualifier>v20150528-0211</forceContextQualifier>
+    <forceContextQualifier>v20150805-0802</forceContextQualifier>
   </properties>
   <build>
     <plugins>
