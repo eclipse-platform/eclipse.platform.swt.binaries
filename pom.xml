@@ -51,6 +51,32 @@
         </repository>
       </repositories>
     </profile>
+    <profile>
+      <id>build-natives-arm</id>
+      <activation>
+        <property>
+          <!-- This has to be hardcoded. Profiles are not allowed to use pom defined properties :-( -->
+          <name>native</name>
+          <value>gtk.linux.arm</value>
+        </property>
+      </activation>
+      <modules>
+        <module>bundles/org.eclipse.swt.gtk.linux.arm</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>build-natives-aarch64</id>
+      <activation>
+        <property>
+          <!-- This has to be hardcoded. Profiles are not allowed to use pom defined properties :-( -->
+          <name>native</name>
+          <value>gtk.linux.aarch64</value>
+        </property>
+      </activation>
+      <modules>
+        <module>bundles/org.eclipse.swt.gtk.linux.aarch64</module>
+      </modules>
+    </profile>
   </profiles>
 
   <modules>
