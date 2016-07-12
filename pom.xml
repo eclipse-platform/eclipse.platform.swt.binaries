@@ -118,15 +118,15 @@
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>target-platform-configuration</artifactId>
         <configuration>
-          <executionEnvironment>JavaSE-1.7</executionEnvironment>
+          <executionEnvironment>JavaSE-1.8</executionEnvironment>
         </configuration>
       </plugin>
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-compiler-plugin</artifactId>
         <configuration>
-          <source>1.7</source>
-          <target>1.7</target>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
