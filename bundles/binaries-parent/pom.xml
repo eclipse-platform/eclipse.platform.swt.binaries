@@ -14,7 +14,7 @@
   <parent>
     <artifactId>eclipse.platform.swt.binaries</artifactId>
     <groupId>eclipse.platform.swt.binaries</groupId>
-    <version>4.6.1-SNAPSHOT</version>
+    <version>4.6.2-SNAPSHOT</version>
     <relativePath>../../</relativePath>
   </parent>
   <groupId>eclipse.platform.swt.binaries</groupId>
