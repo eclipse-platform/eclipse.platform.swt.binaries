@@ -25,6 +25,7 @@ Export-Package:
  org.eclipse.swt.internal.theme; x-internal:=true,
  org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.internal.cocoa; x-friends:="org.eclipse.ui"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Eclipse-PlatformFilter: (& (osgi.ws=cocoa) (osgi.os=macosx) (osgi.arch=x86_64) )
 SWT-WS: cocoa
 SWT-OS: macosx
