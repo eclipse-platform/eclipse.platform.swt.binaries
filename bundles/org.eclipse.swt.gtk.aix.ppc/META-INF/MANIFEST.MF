@@ -22,7 +22,6 @@ Export-Package:
  org.eclipse.swt.widgets,
  org.eclipse.swt.internal; x-friends:="org.eclipse.ui",
  org.eclipse.swt.internal.image; x-internal:=true,
- org.eclipse.swt.internal.theme; x-internal:=true,
  org.eclipse.swt.internal.accessibility.gtk; x-internal:=true,
  org.eclipse.swt.internal.cairo; x-internal:=true,
  org.eclipse.swt.internal.gtk; x-internal:=true,
