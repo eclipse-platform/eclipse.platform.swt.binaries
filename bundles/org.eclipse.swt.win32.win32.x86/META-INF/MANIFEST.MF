@@ -22,7 +22,6 @@ Export-Package:
  org.eclipse.swt.widgets,
  org.eclipse.swt.internal; x-friends:="org.eclipse.ui",
  org.eclipse.swt.internal.image; x-internal:=true,
- org.eclipse.swt.internal.mozilla; x-internal:=true,
  org.eclipse.swt.ole.win32,
  org.eclipse.swt.internal.gdip; x-internal:=true,
  org.eclipse.swt.internal.ole.win32; x-internal:=true,
