@@ -1,0 +1,2 @@
+Webkit2 loads extensions from directory thus the webextension can not be put together with the other .so files because
+Webkit will throw warnings when trying to load them.
