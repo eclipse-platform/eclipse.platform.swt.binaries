@@ -2,6 +2,7 @@
 
 # tl;dr Force-copies fresh sources and builds *swt*.jar file, while overcomming some quirks with build system.
 #       Used for testing/development of swt behaviour when in .jar And/Or runs as OSGI package in eclipse. (Not for official builds).
+# If you set your DEV_ECLIPSE env var, then this script will copy the generated *.jar into it. (See below).
 
 # This script modifies a few build files and uses maven to:
 # 1) Builds the SWT binaries (build.sh)  in the swt/../lib/bin folder.
@@ -33,3 +34,15 @@ sed -r -i "s/${PREFIX}v[0-9]{8}-[0-9]{4}/${PREFIX}v${CACHED_FQM}/" ../binaries-p
 # Print instructions to user.
 echo -e "---\nIf Maven build went well, the *swt*.jar can be found in ./target/"
 
+if [ "${DEV_ECLIPSE}" != "" ]; then
+	echo " Copying generated *.jar files into your ${DEV_ECLIPSE} folder"
+	cp -v ./target/org.eclipse.swt.gtk.linux.x86_64-*-SNAPSHOT.jar ${DEV_ECLIPSE}/plugins/org.eclipse.swt.gtk.linux.x86_64_*
+	cp -v ./target/org.eclipse.swt.gtk.linux.x86_64-*-SNAPSHOT-sources.jar ${DEV_ECLIPSE}/plugins/org.eclipse.swt.gtk.linux.x86_64.source_*.jar
+	echo "Note: Below should list newly generated *jar files with current timestamp"
+	ls -l --color=auto -a ${DEV_ECLIPSE}/plugins/org.eclipse.swt.gtk.linux.x86_64*
+else
+	echo "Note:" 
+	echo "  Set DEV_ECLIPSE to your development eclipse folder to have the *.jar files copied into it automatically."
+	echo '  e.g:  cd <your dev eclipse>; export DEV_ECLIPSE=$(pwd)'
+	echo '  Note that "pwd" does not add trailing forward slash'
+fi
