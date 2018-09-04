@@ -20,7 +20,7 @@
             
         <groupId>eclipse.platform.swt.binaries</groupId>
             
-        <version>4.9.0-SNAPSHOT</version>
+        <version>4.10.0-SNAPSHOT</version>
             
         <relativePath>../../</relativePath>
           
@@ -30,7 +30,7 @@
       
     <artifactId>binaries-parent</artifactId>
       
-    <version>4.9.0-SNAPSHOT</version>
+    <version>4.10.0-SNAPSHOT</version>
       
     <packaging>pom</packaging>
       
