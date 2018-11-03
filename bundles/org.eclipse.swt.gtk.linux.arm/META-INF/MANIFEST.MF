@@ -30,3 +30,4 @@ Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=linux) (osgi.arch=arm))
 SWT-WS: gtk
 SWT-OS: linux
 SWT-Arch: arm
+Automatic-Module-Name: org.eclipse.swt.gtk.linux.arm
