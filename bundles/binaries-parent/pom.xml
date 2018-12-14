@@ -77,13 +77,6 @@
                 </executions>
                 <dependencies>
                     <dependency>
-                        <groupId>com.sun</groupId>
-                        <artifactId>tools</artifactId>
-                        <version>0.0.0</version>
-                        <scope>system</scope>
-                        <systemPath>${toolsjar}</systemPath>
-                    </dependency>
-                    <dependency>
                         <groupId>org.mozilla</groupId>
                         <artifactId>rhino</artifactId>
                         <version>1.7.10</version>
@@ -97,4 +90,29 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+	<profile>
+		<id>pre-jigsaw</id>
+		<activation>
+			<jdk>1.8</jdk>
+		</activation>
+		<build>
+			<plugins>
+				<plugin>
+					<artifactId>maven-antrun-plugin</artifactId>
+					<dependencies>
+						<dependency>
+							<groupId>com.sun</groupId>
+							<artifactId>tools</artifactId>
+							<version>0.0.0</version>
+							<scope>system</scope>
+							<systemPath>${toolsjar}</systemPath>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</build>
+	</profile>
+
+</profiles>
 </project>
