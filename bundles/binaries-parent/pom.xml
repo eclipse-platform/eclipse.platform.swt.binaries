@@ -25,7 +25,7 @@
     <packaging>pom</packaging>
       
     <properties>
-        <forceContextQualifier>v20181219-1801</forceContextQualifier>
+        <forceContextQualifier>v20181220-1802</forceContextQualifier>
     </properties>
       
     <build>
