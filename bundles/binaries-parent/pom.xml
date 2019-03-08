@@ -15,13 +15,13 @@
     <parent>
         <artifactId>eclipse.platform.swt.binaries</artifactId>
         <groupId>eclipse.platform.swt.binaries</groupId>
-        <version>4.11.0-SNAPSHOT</version>
+        <version>4.12.0-SNAPSHOT</version>
         <relativePath>../../</relativePath>
     </parent>
       
     <groupId>eclipse.platform.swt.binaries</groupId>
     <artifactId>binaries-parent</artifactId>
-    <version>4.11.0-SNAPSHOT</version>
+    <version>4.12.0-SNAPSHOT</version>
     <packaging>pom</packaging>
       
     <properties>
