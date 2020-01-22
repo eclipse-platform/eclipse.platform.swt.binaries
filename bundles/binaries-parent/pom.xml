@@ -22,7 +22,7 @@
   <version>4.6.3-SNAPSHOT</version>
   <packaging>pom</packaging>
   <properties>
-    <forceContextQualifier>v20200101-1200</forceContextQualifier>
+    <forceContextQualifier>v20200122-1217</forceContextQualifier>
   </properties>
   <build>
     <plugins>
