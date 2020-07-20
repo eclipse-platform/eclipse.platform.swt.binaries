@@ -19,7 +19,7 @@
 	<property name="targets" value="x86_64 chromium_install"/>
 
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
-	<property name="version.suffix" value="3.114.0" />
+	<property name="version.suffix" value="3.115.0" />
 
 	<condition property="plugindir" value="../../../eclipse.platform.swt/bundles/org.eclipse.swt.browser.chromium" else="${buildDirectory}/plugins/org.eclipse.swt.browser.chromium">
 		<available file="../../../eclipse.platform.swt/bundles/org.eclipse.swt" type="dir"/>
