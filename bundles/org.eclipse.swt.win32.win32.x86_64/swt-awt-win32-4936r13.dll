@@ -1,5 +1,5 @@
 Failed to convert timestamp reply
-27171:error:0D07207B:asn1 encoding routines:ASN1_get_object:header too long:asn1_lib.c:150:
+11751:error:0D07207B:asn1 encoding routines:ASN1_get_object:header too long:asn1_lib.c:150:
 authenticode timestamping failed
 
 Failed
