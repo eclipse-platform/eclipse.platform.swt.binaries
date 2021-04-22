@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Fragment-Host: org.eclipse.swt;bundle-version="[3.116.0,4.0.0)"
 Bundle-Name: %fragmentName
 Bundle-Vendor: %providerName
-Bundle-SymbolicName: org.eclipse.swt.cocoa.macosx.arm64; singleton:=true
+Bundle-SymbolicName: org.eclipse.swt.cocoa.macosx.aarch64; singleton:=true
 Bundle-Version: 3.116.100.qualifier
 Bundle-ManifestVersion: 2
 Bundle-Localization: fragment
@@ -23,8 +23,8 @@ Export-Package:
  org.eclipse.swt.internal; x-friends:="org.eclipse.ui",
  org.eclipse.swt.internal.image; x-internal:=true,
  org.eclipse.swt.internal.cocoa; x-friends:="org.eclipse.ui"
-Eclipse-PlatformFilter: (& (osgi.ws=cocoa) (osgi.os=macosx) (osgi.arch=arm64) )
+Eclipse-PlatformFilter: (& (osgi.ws=cocoa) (osgi.os=macosx) (osgi.arch=aarch64) )
 SWT-WS: cocoa
 SWT-OS: macosx
-SWT-Arch: arm64
-Automatic-Module-Name: org.eclipse.swt.cocoa.macosx.arm64
+SWT-Arch: aarch64
+Automatic-Module-Name: org.eclipse.swt.cocoa.macosx.aarch64

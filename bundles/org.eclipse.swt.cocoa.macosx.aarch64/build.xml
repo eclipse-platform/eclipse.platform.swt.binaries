@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="org.eclipse.swt.cocoa.macosx.arm64" default="build.jars" basedir=".">
+<project name="org.eclipse.swt.cocoa.macosx.aarch64" default="build.jars" basedir=".">
 
 	<property name="swt.ws" value="cocoa" />
 	<property name="swt.os" value="macosx" />
-	<property name="swt.arch" value="arm64" />
+	<property name="swt.arch" value="aarch64" />
 	
 	<!-- These properties are used by eclipse when exporting as Deployable plugin and fragments -->
 	<property name="version.suffix" value="3.116.0" />
