@@ -3,7 +3,7 @@ Fragment-Host: org.eclipse.swt;bundle-version="[3.116.0,4.0.0)"
 Bundle-Name: Chromium SWT Widget for GTK
 Bundle-Vendor: Eclipse.org
 Bundle-SymbolicName: org.eclipse.swt.browser.chromium.gtk.linux.x86_64;singleton:=true
-Bundle-Version: 3.116.100.qualifier
+Bundle-Version: 3.116.200.qualifier
 Bundle-ManifestVersion: 2
 Eclipse-PlatformFilter: (& (osgi.ws=gtk) (osgi.os=linux) (osgi.arch=x86_64))
 SWT-WS: gtk

@@ -21,7 +21,7 @@
   </parent>
   <groupId>org.eclipse.swt</groupId>
   <artifactId>org.eclipse.swt.browser.chromium.cocoa.macosx.x86_64</artifactId>
-  <version>3.116.100-SNAPSHOT</version>
+  <version>3.116.200-SNAPSHOT</version>
   <packaging>eclipse-plugin</packaging>
 
   <properties>
