@@ -84,7 +84,7 @@ spec:
 				container('container') {
 					sh 'mutter --replace --sm-disable &'
 					dir ('eclipse.platform.swt') {
-						checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', timeout: 120]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://git.eclipse.org/r/platform/eclipse.platform.swt.git']]])
+						checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', timeout: 120]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/eclipse-platform/eclipse.platform.swt.git']]])
 					}
 					dir ('eclipse.platform.swt.binaries') {
 						checkout scm
