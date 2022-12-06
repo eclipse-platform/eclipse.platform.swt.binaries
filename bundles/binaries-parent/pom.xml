@@ -20,7 +20,6 @@
         <relativePath>../../</relativePath>
     </parent>
 
-    <groupId>eclipse.platform.swt.binaries</groupId>
     <artifactId>binaries-parent</artifactId>
     <packaging>pom</packaging>
 
@@ -38,7 +37,6 @@
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-packaging-plugin</artifactId>
-                <version>${tycho.version}</version>
                 <configuration>
                     <forceContextQualifier>${forceContextQualifier}</forceContextQualifier>
                 </configuration>
@@ -46,7 +44,6 @@
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>target-platform-configuration</artifactId>
-                <version>${tycho.version}</version>
                 <configuration>
                     <dependency-resolution>
                         <profileProperties>
@@ -71,8 +68,21 @@
                         <phase>initialize</phase>
                         <configuration>
                             <target>
-                                <property name="copy.src.dir" value="src"/>
-                                <ant antfile="build.xml" target="copy.${ws}.src"/>
+                                <property name="copy.src.dir" value="src" />
+                                <ant antfile="../binaries-parent/build.xml" target="copy.${ws}.src" />
+                            </target>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>swtdownload</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <target>
+                                <property name="eclipse.version" value="${releaseNumberSDK}" />
+                                <ant antfile="../binaries-parent/build.xml" target="swtdownload"/>
                             </target>
                         </configuration>
                         <goals>
