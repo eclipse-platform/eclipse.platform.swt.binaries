@@ -29,30 +29,8 @@
     <ws>cocoa</ws>
     <arch>aarch64</arch>
     <buildid>${buildId}</buildid>
+    <targets></targets>
   </properties>
-
-  <build>
-    <plugins>
-      <plugin>
-        <artifactId>maven-antrun-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>swtdownload</id>
-            <phase>package</phase>
-            <configuration>
-              <target>
-                <property name="eclipse.version" value="${releaseNumberSDK}" />
-                <ant antfile="build.xml" target="swtdownload"/>
-              </target>
-            </configuration>
-            <goals>
-              <goal>run</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
 
   <!-- This has to be here. Profiles are not inheritable. -->
   <profiles>
@@ -75,7 +53,7 @@
                 <phase>process-resources</phase>
                 <configuration>
                   <target>
-                    <ant antfile="build.xml" target="build_libraries"/>
+                    <ant antfile="../binaries-parent/build.xml" target="build_libraries"/>
                   </target>
                 </configuration>
                 <goals>
