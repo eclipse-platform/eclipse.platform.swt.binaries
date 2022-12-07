@@ -3,6 +3,7 @@ pipeline {
 		timeout(time: 90, unit: 'MINUTES')
 		buildDiscarder(logRotator(numToKeepStr:'5'))
 		disableConcurrentBuilds(abortPrevious: true)
+		timestamps()
 	}
   agent {
     kubernetes {
@@ -83,7 +84,6 @@ spec:
 		stage('Prepare-environment') {
 			steps {
 				container('container') {
-					sh 'mutter --replace --sm-disable &'
 					dir ('eclipse.platform.swt') {
 						checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CloneOption', timeout: 120]], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/eclipse-platform/eclipse.platform.swt.git']]])
 					}
@@ -102,7 +102,9 @@ spec:
 					    	    sh '/opt/tools/apache-maven/latest/bin/mvn --batch-mode -Pbuild-individual-bundles -DforceContextQualifier=zzz -Dnative=gtk.linux.x86_64 -Dcompare-version-with-baselines.skip=true -Dmaven.compiler.failOnWarning=true install '
 					        }
 					        dir ('eclipse.platform.swt') {
-					    	    sh '/opt/tools/apache-maven/latest/bin/mvn --batch-mode -Pbuild-individual-bundles -DcheckAllWS=true -DforkCount=0 -Dcompare-version-with-baselines.skip=false -Dmaven.compiler.failOnWarning=true clean verify '
+					    	    sh '/opt/tools/apache-maven/latest/bin/mvn --batch-mode -Pbuild-individual-bundles -DcheckAllWS=true -DforkCount=0 -Dcompare-version-with-baselines.skip=false -Dmaven.compiler.failOnWarning=true \
+						    	    -Dmaven.test.failure.ignore=true -Dmaven.test.error.ignore=true \
+						    	    clean verify '
 					        }
 					    }
 				    }
