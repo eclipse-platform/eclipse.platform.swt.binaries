@@ -28,42 +28,7 @@
     <os>macosx</os>
     <ws>cocoa</ws>
     <arch>aarch64</arch>
-    <buildid>${buildId}</buildid>
     <targets></targets>
   </properties>
 
-  <!-- This has to be here. Profiles are not inheritable. -->
-  <profiles>
-    <profile>
-      <id>build-natives</id>
-      <activation>
-        <property>
-          <!-- This has to be hardcoded. Profiles are not allowed to use pom defined properties :-( -->
-          <name>native</name>
-          <value>cocoa.macosx.aarch64</value>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>natives</id>
-                <phase>process-resources</phase>
-                <configuration>
-                  <target>
-                    <ant antfile="../binaries-parent/build.xml" target="build_libraries"/>
-                  </target>
-                </configuration>
-                <goals>
-                  <goal>run</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
 </project>
