@@ -86,12 +86,20 @@ spec:
 			steps {
 				container('container') {
 					dir ('eclipse.platform.swt') {
-						checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
-							extensions: [[$class: 'CloneOption', timeout: 120]], userRemoteConfigs: [[url: 'https://github.com/eclipse-platform/eclipse.platform.swt.git']]
+						checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+							extensions: [[$class: 'CloneOption', timeout: 120]],
+							userRemoteConfigs: [[url: 'https://github.com/eclipse-platform/eclipse.platform.swt.git']]
 						])
 					}
 					dir ('eclipse.platform.swt.binaries') {
-						checkout scm
+						checkout([$class: 'GitSCM', branches: [[name: env.BRANCH_NAME ]],
+							extensions: [[$class: 'CloneOption', timeout: 120, depth: 1, shallow: true]],
+							userRemoteConfigs: [[url: 'https://github.com/eclipse-platform/eclipse.platform.swt.binaries.git']]
+						])
+						sh '''
+							echo ${env.GIT_URL}
+							echo ${env.BRANCH_NAME}
+						'''
 					}
 				}
 			}
