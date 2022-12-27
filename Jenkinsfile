@@ -104,14 +104,16 @@ spec:
 							dir ('eclipse.platform.swt.binaries') {
 								sh '''
 									/opt/tools/apache-maven/latest/bin/mvn install \
-										--batch-mode -Pbuild-individual-bundles -DforceContextQualifier=zzz -Dnative=gtk.linux.x86_64 \
+										--batch-mode --no-transfer-progress \
+										-Pbuild-individual-bundles -DforceContextQualifier=zzz -Dnative=gtk.linux.x86_64 \
 										-Dcompare-version-with-baselines.skip=true -Dmaven.compiler.failOnWarning=true
 								'''
 							}
 							dir ('eclipse.platform.swt') {
 								sh '''
 									/opt/tools/apache-maven/latest/bin/mvn clean verify \
-										--batch-mode -Pbuild-individual-bundles -DcheckAllWS=true -DforkCount=0 \
+										--batch-mode --no-transfer-progress \
+										-Pbuild-individual-bundles -DcheckAllWS=true -DforkCount=0 \
 										-Dcompare-version-with-baselines.skip=false -Dmaven.compiler.failOnWarning=true \
 										-Dmaven.test.failure.ignore=true -Dmaven.test.error.ignore=true
 								'''
