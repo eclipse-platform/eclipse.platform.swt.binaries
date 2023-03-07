@@ -28,7 +28,7 @@
             forceContextQualifier gets updated during build input process using
             ant script <SWT source repo>/bundles/org.eclipse.swt/buildInternal.xml 
         -->
-        <forceContextQualifier>v20230220-1431</forceContextQualifier>
+        <forceContextQualifier>v20230307-1129</forceContextQualifier>
         <buildid>${buildId}</buildid>
     </properties>
 
