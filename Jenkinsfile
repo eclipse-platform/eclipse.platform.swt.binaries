@@ -85,13 +85,33 @@ spec:
 		stage('Prepare environment') {
 			steps {
 				container('container') {
-					dir ('eclipse.platform.swt') {
-						checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
-							extensions: [[$class: 'CloneOption', timeout: 120]], userRemoteConfigs: [[url: 'https://github.com/eclipse-platform/eclipse.platform.swt.git']]
-						])
-					}
+					//TODO: adjust checkout step in gh-workflow accordingly in o.e.platform.swt repo use: lfs: ''
+//					dir ('eclipse.platform.swt') {
+//						checkout scmGit(branches: [[name: '*/master']], 
+//							extensions: [[$class: 'CloneOption', timeout: 120]], userRemoteConfigs: [[url: 'https://github.com/eclipse-platform/eclipse.platform.swt.git']]
+//						)
+//					}
 					dir ('eclipse.platform.swt.binaries') {
+					sshagent(['github-bot-ssh']) {
+						checkout scmGit(
+							userRemoteConfigs: [[url: 'git@github.com:eclipse-platform/eclipse.platform.swt.binaries.git', credentialsId: 'github-bot-ssh']],
+							branches: [[name: "refs/pull/${env.CHANGE_ID}/head"]],
+							extensions: [ lfs(), cloneOption(noTags: true, shallow: false) ]
+						)
+					}
+						sh '''
+							ls .git
+							ls .git/hooks
+							cat bundles/org.eclipse.swt.win32.win32.x86_64/swt-win32-4960r3.dll
+						'''
+					}
+					dir ('eclipse.platform.swt.binaries-oldstyle') {
 						checkout scm
+						sh '''
+							ls .git
+							ls .git/hooks
+							cat bundles/org.eclipse.swt.win32.win32.x86_64/swt-win32-4960r3.dll
+						'''
 					}
 				}
 			}
