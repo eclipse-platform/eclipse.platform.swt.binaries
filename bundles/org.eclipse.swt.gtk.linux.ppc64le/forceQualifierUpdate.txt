@@ -1,2 +1,3 @@
 # To force a version qualifier update add the bug here
 Bug 434039 - SWT fragment source is not always included in SDK or repository
+Bug 527899 [9] Implement JEP 280: Indify String Concatenation
