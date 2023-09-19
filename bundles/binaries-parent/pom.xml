@@ -50,13 +50,6 @@
             </plugin>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
-                <artifactId>target-platform-configuration</artifactId>
-                <configuration>
-                    <executionEnvironment>JavaSE-17</executionEnvironment>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-compiler-plugin</artifactId>
                 <configuration>
                     <release>17</release>
@@ -73,6 +66,7 @@
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>target-platform-configuration</artifactId>
                 <configuration>
+					<executionEnvironment>JavaSE-17</executionEnvironment>
                     <dependency-resolution>
                         <profileProperties>
                             <!-- set property so that the filter condition on the p2 dependencies from org.eclipse.swt to the fragments does not match -->
