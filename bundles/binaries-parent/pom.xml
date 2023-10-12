@@ -30,7 +30,7 @@
             ant script <SWT source repo>/bundles/org.eclipse.swt/buildInternal.xml 
         -->
         
-        <forceContextQualifier>v20220907-1543</forceContextQualifier>
+        <forceContextQualifier>v20231010-1245</forceContextQualifier>
     </properties>
 
     <build>
