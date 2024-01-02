@@ -105,7 +105,7 @@ spec:
 								sh '''
 									/opt/tools/apache-maven/latest/bin/mvn install \
 										--batch-mode --no-transfer-progress \
-										-Pbuild-individual-bundles -DforceContextQualifier=zzz -Dnative=gtk.linux.x86_64 \
+										-DforceContextQualifier=zzz -Dnative=gtk.linux.x86_64 \
 										-Dcompare-version-with-baselines.skip=true -Dmaven.compiler.failOnWarning=true
 								'''
 							}
@@ -113,7 +113,7 @@ spec:
 								sh '''
 									/opt/tools/apache-maven/latest/bin/mvn clean verify \
 										--batch-mode --no-transfer-progress \
-										-Pbuild-individual-bundles -DcheckAllWS=true -DforkCount=0 \
+										-DcheckAllWS=true -DforkCount=0 \
 										-Dcompare-version-with-baselines.skip=false -Dmaven.compiler.failOnWarning=true \
 										-Dmaven.test.failure.ignore=true -Dmaven.test.error.ignore=true
 								'''

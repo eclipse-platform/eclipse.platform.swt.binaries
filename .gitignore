@@ -1,3 +1,5 @@
 src/
 target/
 tmpdir/
+.polyglot.*
+pom.tycho
